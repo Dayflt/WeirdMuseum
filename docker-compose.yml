@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+    postgres_db:
+        image: postgres:12.0-alpine
+        volumes:
+          - ./postgres_data_dev:/var/lib/postgresql/data/
+        container_name: postgres
+        restart: always
+        environment:
+          POSTGRES_USER: "dayfly"
+          POSTGRES_PASSWORD: "dayfly"
+          POSTGRES_DB: "dayfly_db"
+        ports:
+          - 5432:5432  
+    react-app:
+        #dockerfile 위치
+        build: ./Frontend
+            
+        ports:
+            - "3000:3000"
+        #호스트와 컨테이너 동기화할곳
+        volumes: 
+            - ./Frontend:/app
+        environment:
+            - CHOKIDAR_USEPOLLING=true
+
+    flask-app:
+        build:  ./Backend
+
+        ports:
+            - "5000:5000"
+        depends_on: 
+            - postgres_db
+        restart: always
+        volumes:
+            - ./Backend/web:/app        
+
+
