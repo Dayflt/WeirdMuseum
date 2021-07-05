@@ -1,2 +1,2 @@
 # Docker
-도커 초기세팅
+Docker initial setting
