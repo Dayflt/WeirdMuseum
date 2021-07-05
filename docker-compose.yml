@@ -22,6 +22,10 @@ services:
         #호스트와 컨테이너 동기화할곳
         volumes: 
             - ./Frontend:/app
+            - build_folder:/app/build
+            - ./Frontend/node_modules/:/app/node_modules
+        stdin_open: true
+        tty: true
         environment:
             - CHOKIDAR_USEPOLLING=true
 
@@ -30,10 +34,18 @@ services:
 
         ports:
             - "5000:5000"
-        depends_on: 
-            - postgres_db
         restart: always
         volumes:
-            - ./Backend/web:/app        
+            - ./Backend/web:/app   
+        env_file: 
+            - ./settings/dev/.env.dev  
+        depends_on: 
+            - postgres_db
+
+
+volumes:
+    postgres_data_dev:
+    build_folder:
+                
 
 
