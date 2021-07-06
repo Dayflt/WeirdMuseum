@@ -1,7 +1,0 @@
-#COPY . .으로 도커컨테이너에 현재디렉토리 파일들 복사할때 복사할이유 없는것들
-node_modules
-Dockerfile
-.git
-.gitignore
-.dockerignore
-.env

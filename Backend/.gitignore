@@ -1,7 +1,0 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# pycache 지우기
-git rm -rf --cached .
-git add .
-
-__pycache__
