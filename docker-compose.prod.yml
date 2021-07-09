@@ -12,17 +12,17 @@ services:
     #     ports:
     #       - "5432:5432"
 
-    # react-app:
-    #     build: ./Frontend
+    react-app:
+        build: ./Frontend
 
-    #     volumes: 
-    #         - ./Frontend:/app
-    #         - build_folder:/app/build
-    #         - ./Frontend/node_modules/:/app/node_modules
-    #     stdin_open: true
-    #     tty: true
-    #     environment:
-    #         - CHOKIDAR_USEPOLLING=true
+        volumes: 
+            - ./Frontend:/app
+            - build_folder:/app/build
+            - ./Frontend/node_modules/:/app/node_modules
+        stdin_open: true
+        tty: true
+        environment:
+            - CHOKIDAR_USEPOLLING=true
 
     flask-app:
         build:  ./Backend
@@ -45,17 +45,17 @@ services:
             - "80:80"
         restart: "on-failure"
         
-        # volumes: 
-        #     - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-            # - build_folder:/var/www/frontend
+        volumes: 
+            # - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+            - build_folder:/var/www/Frontend
 
         depends_on:
             - flask-app
-            # - react-app
+            - react-app
 
-# volumes:
+volumes:
+    build_folder:
 #     postgres_data_dev:
-#     build_folder:
 
                 
 
