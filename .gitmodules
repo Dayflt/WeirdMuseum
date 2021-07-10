@@ -1,3 +1,6 @@
 [submodule "Frontend"]
 	path = Frontend
 	url = https://github.com/Dayflt/Frontend.git
+[submodule "Backend_repo"]
+	path = Backend_repo
+	url = https://github.com/Dayflt/Backend_repo.git
