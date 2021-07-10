@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.Page {
+  background-color: #f2ddcc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: cal(10px + 2vmin);
+  color: black;
+  text-align: center;
+}
+
+.Star-logo {
+  height: 5vmin;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.Page-header {
+  width: 80%;
+  border-radius: 10px;
+  border: solid 1.5px #f6f7fa;
+  margin: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+.step_bigbox{
+  text-align: center;
+}
+.step_box{
+  background-color: #c4c4c4;
+  display: inline-block;
+  padding: 5px;
+  width: 70%;
+}
+.step{
+  display: inline-block;
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+}
+.photo_box{
+    clear: both;
+}
+.photo_box img{
+    width: 15vmin;
+    height: 15vmin;
+    margin: 3%;
+}
+.button_box{
+    clear: both;
+}
+.StartButton {
+    background-color: #c4c4c4;
+    text-align: center;
+    color: black;
+    border-radius: 15px;
+    font-size: 200%;
+    font-family: 'Jua', sans-serif;
+    margin: 3%;
+    padding: 4% 7% 4% 7%;
+}
+.GalleryButton {
+  text-align: center;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 2%;
+  vertical-align: middle;
+  font-family: 'Jua', sans-serif;
+}
+@media all and (max-width:1200px){
+  .step{
+    display: inline-block;
+    padding: 0 20px 0 20px
+  }
+}
+@media all and (max-width:960px){
+  .Page-header > h4{
+    font-size: 20px;
+  }
+  .step{
+    display: inline-block;
+    padding: 0 20px 0 20px;
+  }
+}
+@media all and (max-width:768px){
+  .Page-header > h1{
+    font-size: 35px;
+  }
+  .step{
+    display: inline-block;
+    padding: 0 20px 0 20px;
+  }
+  .photo_box img{
+    width: 100px;
+    height: 100px;
+    margin: 2%;
+ }
+ .StartButton {
+  font-size: 25px;
+}
+  .GalleryButton {
+    font-size: 20px;
+  }
+}
+@media all and (max-width:320px){
+  .Page-header > h4{
+    font-size: 15px;
+  }
+  .step{
+    display: inline-block;
+    padding: 0 0 0 0;
+    font-size: 10px;
+  }
+  .photo_box img{
+    width: 100px;
+    height: 100px;
+    margin: 2%;
+}
+}
