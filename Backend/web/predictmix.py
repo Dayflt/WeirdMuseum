@@ -3,9 +3,23 @@ import imageio
 from skimage.transform import resize
 from skimage import img_as_ubyte
 from web.gcp import upload_vid
-import os
+from web.views import *
+import os, math, random
+
+def remake_vidname(vid_name):
+    vid_name=vid_name+str(math.ceil(random.random()*100000))
+    return vid_name
+
+def del_vid(vid_name, cap = True):
+    "if cap = True : cap vid, if cap = False : mixed vid"
+    if cap:
+        os.remove(os.path.join(os.getcwd(), vid_name))
+    else:
+        vid_name = vid_name.split('.')[0]
+        os.remove(os.path.join(os.getcwd(), 'web/data/result/%s.mp4'%vid_name))
 
 def generate(config_path, cp_path , source_img, driving_video):
+    "mixes video with AI and saves mixed vid in local and bucket"
     vid_name = driving_video.split('.')[0]
     # imageio.get_reader(URI)를 이를 이용해서 이미지를 이진 데이터로 읽는 것이 충분히 가능
     # 지금 해야 하는 것은 blob으로 받아온 영상을, 즉 영상을 이미지단위로 나누어서 blob으로 받아오는 것이기 때문에 
@@ -34,6 +48,9 @@ def generate(config_path, cp_path , source_img, driving_video):
         generator = model_gen, kp_detector = model_kp, relative = True, adapt_movement_scale = True, cpu = True)
     vid = [img_as_ubyte(frame) for frame in vid]
     # numpy array -> mp4
+
+    vid_name=remake_vidname(vid_name)
     imageio.mimsave(os.path.join(os.getcwd(),'web/data/result/%smixed.mp4'%vid_name), vid, fps=fps)
+
     # 동영상의 url 반환
     return(upload_vid('%smixed.mp4'%vid_name))

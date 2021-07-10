@@ -7,13 +7,11 @@ RUN apt-get update -y && \
     build-essential libssl-dev libffi-dev python3-setuptools 
     
 
-
-
-ENV FLASK_APP=app.py
+ENV FLASK_APP=__init__.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 RUN pip3 install --upgrade pip
-COPY requirements.txt .
+COPY requirements.txt .                         
 RUN pip3 install -r requirements.txt
 
 COPY . . 

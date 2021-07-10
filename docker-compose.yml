@@ -1,32 +1,32 @@
 version: "3"
 
 services:
-    # postgres_db:
-    #     image: postgres:12.0-alpine
-    #     volumes:
-    #       - postgres_data:/var/lib/postgresql/data/
-    #     container_name: postgres
-    #     restart: always
-    #     environment:
-    #       POSTGRES_USER: "eg_user"
-    #       POSTGRES_PASSWORD: "eg_pw"
-    #       POSTGRES_DB: "eg_dv"
-    #     ports:
-    #       - 5432:5432  
+    postgres_db:
+        image: postgres:12.0-alpine
+        volumes:
+          - postgres_data:/var/lib/postgresql/data/
+        container_name: postgres
+        restart: always
+        environment:
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: "1234"
+          POSTGRES_DB: "video"
+        ports:
+          - 5432:5432  
     flask-app:
         build:  ./Backend
-        command: python3 app.py run -h 0.0.0.0
+        command: python3 run.py run -h 0.0.0.0
         expose:
             - 5000
         ports:
             - "5000:5000"
         restart: always
         volumes:
-            - ./Backend/web:/app   
+            - ./Backend:/app   
         env_file: 
             - ./settings/dev/.env.dev  
-        # depends_on: 
-        #     - postgres_db
+        depends_on: 
+            - postgres_db
     react-app:
         build: ./Frontend
         command: ["npm","start"]
@@ -41,9 +41,8 @@ services:
         environment:
             - CHOKIDAR_USEPOLLING=true
 
-
-# volumes:
-#     postgres_data:
+volumes:
+    postgres_data:
                 
 
 
