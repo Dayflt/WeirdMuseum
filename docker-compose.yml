@@ -15,7 +15,9 @@ services:
           - 5432:5432  
     flask-app:
         build:  ./Backend
-        command: python3 run.py run -h 0.0.0.0
+        command: >
+            sh -c "python3 run.py create_db &&
+                    python3 run.py run -h 0.0.0.0"
         
         expose:
             - 5000
