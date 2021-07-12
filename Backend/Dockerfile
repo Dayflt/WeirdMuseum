@@ -12,9 +12,10 @@ ENV FLASK_RUN_HOST=0.0.0.0
 
 RUN pip3 install --upgrade pip
 COPY requirements.txt .                         
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . . 
 # EXPOSE 5000
 
-# CMD [ "python3","app.py" ]
+# run entrypoint.sh
+# ENTRYPOINT ["/app/entrypoint.sh"]
