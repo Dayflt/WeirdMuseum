@@ -1,20 +1,8 @@
 version: "3"
 
 services:
-    # postgres_db:
-    #     image: postgres:12.0-alpine
-    #     volumes:
-    #       - postgres_data_dev:/var/lib/postgresql/data/
-    #     container_name: postgres_db
-    #     restart: always
-    #     env_file: 
-    #         - ./settings/prod/.env.db  
-    #     ports:
-    #       - "5432:5432"
-
     react-app:
         build: ./Frontend
-
         volumes: 
             - ./Frontend:/app
             - build_folder:/app/build
@@ -26,16 +14,13 @@ services:
 
     flask-app:
         build:  ./Backend
-
-        expose:
-            - 5000
+        ports:
+            - "5000:5000"
         restart: always
         volumes:
             - ./Backend/web:/app   
         env_file: 
             - ./settings/prod/.env.prod 
-        # depends_on: 
-        #     - postgres_db
         command: gunicorn -w 1 --bind 0.0.0.0:5000 app:app
 
     
@@ -44,7 +29,6 @@ services:
         ports:
             - "80:80"
         restart: "on-failure"
-        
         volumes: 
             # - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
             - build_folder:/var/www/Frontend
@@ -55,7 +39,6 @@ services:
 
 volumes:
     build_folder:
-#     postgres_data_dev:
 
                 
 
