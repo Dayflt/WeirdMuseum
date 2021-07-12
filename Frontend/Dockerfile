@@ -17,4 +17,5 @@ COPY . .
 # CMD ["npm","start"]
 
 #Prod
-# RUN ["npm", "run", "build"]
+RUN ["npm", "run", "build"]
+# CMD ["npm", "run", "build"]
