@@ -2,9 +2,10 @@
 # 우리가 만드는 flask앱을 모듈화 시킨이후에 실행시키기 위해 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config.from_object("web.config.Config")
 db=SQLAlchemy(app)
 
