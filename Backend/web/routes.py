@@ -20,7 +20,7 @@ def load_file():
 @app.route('/api/model', methods = ['POST'])
 def upload_file():
    if request.method == 'POST':
-      img_name=request.form['img_name']
+      img_name=request.form['image_no']
       f = request.files['file']
       f.save(secure_filename(f.filename))
 
@@ -43,13 +43,17 @@ def mixvideo(img_name,file_name):
     if not mixedvid:
         return '', 404
 
+    #return jsonify({
+    #    'success' :  True,
+    #    'file' : 'Received',
+    #    'model_result' : mixedvid})
     return jsonify({
-        'success' :  True,
-        'file' : 'Received',
-        'model_result' : mixedvid})
+        'success':True,
+        'model_id':views.get_model_id(mixedvid)
+    })
 
 
-@app.route('/api/model/<model_id>', methods = ['GET', 'DELETE', 'POST'])
+@app.route('/api/model/<model_id>', methods = ['GET', 'DELETE', 'PATCH'])
 def return_result(model_id):
     if request.method == 'GET':
         try:
@@ -67,8 +71,7 @@ def return_result(model_id):
             return jsonify({'success' : True})
         except NoResultFound:
             raise NoModelFound
-    else:
-
+    elif request.method=='PATCH':
         try:
             f = request.get_json()
             user_name, category_id = f['user_name'], f['category_id']

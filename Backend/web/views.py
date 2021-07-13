@@ -17,6 +17,11 @@ def video_insert(model_result, image_no):
     model_idR=db.session.query(video_table.model_id).filter(video_table.model_result==model_result).first()
     return model_idR.model_id
 
+def get_model_id(model_result):
+    "get model_id form model_result"
+    id=db.session.query(video_table).filter(video_table.model_result==model_result).first()
+    return id.model_id
+
 #model_id받았을 때 result결과 주소 반환
 def get_video_url(model_id):
     "gets model_result from model_id"
