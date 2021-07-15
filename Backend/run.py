@@ -1,4 +1,4 @@
-from posix import CLD_EXITED
+# from posix import CLD_EXITED
 from flask.cli import FlaskGroup
 from web import app,db
 
