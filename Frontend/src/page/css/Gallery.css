@@ -31,16 +31,17 @@
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
 }
-.gallery_box{
-    display: inline-block;
+.gallery_category{
+    display: inline-grid;
     width: 20%;
-    height: auto;
+    height: 100%;
 }
-.gallery_box > h5{
+.gallery_category > h5{
     margin:0 0 4% 0;
 }
 .gallery_no{
     text-align: center;
+    display: inline-block;
 }
 .gallery_video{
     display: inline-block;
