@@ -33,7 +33,11 @@ const Gallery = () => {
     fetchUsers();
   },[]);
 
-  if (loading) return <div>갤러리 로딩중..</div>;
+  if (loading) 
+    return (
+      <div className="loading_box">
+        <div className="loading">갤러리 로딩중..</div>
+      </div>)
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
     <div className="Page">
@@ -44,7 +48,7 @@ const Gallery = () => {
         </h1>
         <div className="gallery_total">
           <div className="gallery_category" >
-            <h5>이모티콘[1]</h5>
+            <h5>🤣</h5>
             {user1.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -60,7 +64,7 @@ const Gallery = () => {
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>이모티콘[2]</h5>
+            <h5>😚</h5>
             {user2.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -76,7 +80,7 @@ const Gallery = () => {
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>이모티콘[3]</h5>
+            <h5>🙃</h5>
             {user3.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -92,7 +96,7 @@ const Gallery = () => {
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>이모티콘[4]</h5>
+            <h5>😱</h5>
             {user4.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
