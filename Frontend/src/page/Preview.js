@@ -8,49 +8,55 @@ import four from "./img/4.png";
 import plus from "./img/plus.png";
 import star from "./img/star110.png";
 import axios from "axios";
-import { Bdata } from "../App";
+import { Bdata, Burl } from "../App";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import { css } from "@emotion/react";
 
 const Preview = ({ match }) => {
   const { num } = match.params;
   const data = useContext(Bdata);
+  const burl = useContext(Burl);
 
-  const burl = window.URL.createObjectURL(data);
-
-  let [pic] = useState([one, two, thr, four]);
-  //let [model_id, get_id] = useState(num);
-
+  const [loadings, set_load] = useState(false);
+  const [result, set_result] = useState(false);
+  let [pic] = useState([one, two, thr, four]); 
   let model;
 
-  const send = async() => {
-    // const tblob = new Blob([data], { type: "video/mp4" });
-    var file = new File([data], "test.mp4",{ type: "video/mp4" });
+  const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: #ffffff;
+  `;
+
+  const send =  async() => {
     const formData = new FormData();
+    const file = new File([data], 'test.mp4', { type: 'video/mp4'})
     const config = {
       header: { "content-type": "multipart/form-data" },
     };
     formData.append("file", file);
     formData.append("image_no", parseInt(num)+1);
     
-    console.log(formData.get('file'));
-    console.log(formData.get('image_no'));
-
-    await axios.post("http://localhost:5000/api/model", formData, config).then((response) => {
+    
+    set_load(true); // 로딩 시작 재랜더링
+    await axios.post("http://localhost:5000/api/model", formData, config)
+    .then((response) => {
+      set_load(false);
+      set_result(true); // respone을 받으면 재랜더링
       if (response.data.success) {
-        console.log(response.data);
         model = response.data.model_id;
-        console.log("model id 받아옴" + model);
-        // 일단 받아오기
+        window.location.href="../Result/" + model     
       } else {
+        set_load(false);
         alert("업로드 실패");
-      }
+      } 
     });
-    window.location.href="../Result/"+model;
   };
 
   const log = () => {
     console.log('프리뷰(전역)');
-    console.log(data.type);
     console.log(data);
+    console.log(loadings, result);
   };
 
   return (
@@ -60,28 +66,46 @@ const Preview = ({ match }) => {
           <img src={star} className="Star-logo" alt="logo"></img>
           Synthesize Images
         </h1>
-        <h3>선택한 것들!</h3>
         <div className="ImageBox" style={{ margin: "3%" }}>
-          <div className="InputBox">
-            <img className="SelectImg" src={pic[num]} alt="select img"></img>
-          </div>
-          <div className="Plus-logo">
-            <img className="Plus-logo" src={plus} alt="plus img"></img>
-          </div>
-          <div className="InputBox">
-            <video src={burl} autoPlay muted loop /> 
-          </div>
+          {!loadings && !result ? (
+            <div>
+              <h3>선택한 것들!</h3>
+              <div className="InputBox">
+                <img
+                  className="SelectImg"
+                  src={pic[num]}
+                  alt="select img"
+                ></img>
+              </div>
+              <div className="Plus-logo">
+                <img className="Plus-logo" src={plus} alt="plus img"></img>
+              </div>
+              <div className="InputBox">
+                <video src={burl} autoPlay muted loop />
+              </div>
+            </div>
+          ) : result ? (
+            console.log('../Result/' + model)
+          ) : (
+            <div>
+              <h3>waiting...</h3>
+              <PacmanLoader
+                css={override}
+                size={50}
+                color={"#f2ddcc"}
+                loading={loadings}
+              />
+            </div>
+          )}
         </div>
         <div>
           <Link to={`../Record/${num}`}>
             <button className="RunButton">BACK</button>
           </Link>
           <button onClick={log}>하위 log </button>
-          {/* <Link to={`../result/${model}`}> */}
-            <button onClick={send} className="RunButton">
-              SUBMIT
-            </button>
-          {/* </Link> */}
+          <button onClick={send} className="RunButton">
+            SUBMIT
+          </button>
         </div>
       </header>
     </div>
