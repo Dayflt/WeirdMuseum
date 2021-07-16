@@ -9,7 +9,7 @@ import plus from "./img/plus.png";
 import star from "./img/star110.png";
 import axios from "axios";
 import { Bdata, Burl } from "../App";
-import DotLoader from "react-spinners/DotLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import { css } from "@emotion/react";
 
 const Preview = ({ match }) => {
@@ -56,6 +56,7 @@ const Preview = ({ match }) => {
   const log = () => {
     console.log('프리뷰(전역)');
     console.log(data);
+    console.log(loadings, result);
   };
 
   return (
@@ -65,10 +66,10 @@ const Preview = ({ match }) => {
           <img src={star} className="Star-logo" alt="logo"></img>
           Synthesize Images
         </h1>
-        <h3>선택한 것들!</h3>
         <div className="ImageBox" style={{ margin: "3%" }}>
           {!loadings && !result ? (
             <div>
+              <h3>선택한 것들!</h3>
               <div className="InputBox">
                 <img
                   className="SelectImg"
@@ -85,15 +86,16 @@ const Preview = ({ match }) => {
             </div>
           ) : result ? (
             console.log('../Result/' + model)
-            //window.location.href="../Result/" + model
-            
           ) : (
-            <DotLoader
-              css={override}
-              size={60}
-              color={"#f2ddcc"}
-              loading={loadings}
-            />
+            <div>
+              <h3>waiting...</h3>
+              <PacmanLoader
+                css={override}
+                size={50}
+                color={"#f2ddcc"}
+                loading={loadings}
+              />
+            </div>
           )}
         </div>
         <div>

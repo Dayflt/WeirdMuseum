@@ -15,8 +15,11 @@ const Record = ({ match }) => {
   const data = useContext(Bdata);
   const burl = useContext(Burl);
 
+  const [preview, set_pre] = useState(false);
+
   useEffect(() => {
     recordWebcam.open();
+    //set_pre(recordWebcam.webcamRef);
   }, []);
 
   const Set = () => {
@@ -35,6 +38,13 @@ const Record = ({ match }) => {
     console.log(burl);
   };
 
+  const stop = () => {
+    recordWebcam.stop();
+    setTimeout(()=>{
+      set_pre(true);
+    }, 0)
+    
+  }
   return (
     <div className="Page">
       <header className="Page-header">
@@ -43,17 +53,17 @@ const Record = ({ match }) => {
         <div className="ImageBox" style={{ display: "block" }}>
           <div style={{ display: "block" }}>
             <p>Camera status: {recordWebcam.status}</p>
-            <video ref={recordWebcam.webcamRef} autoPlay muted />
+            <video ref= {!preview ? (recordWebcam.webcamRef):(recordWebcam.previewRef)} autoPlay muted />
           </div>
           <div>
             <button onClick={recordWebcam.start}>Start recording</button>
-            <button onClick={recordWebcam.stop}>Stop recording</button>
+            <button onClick={stop}>Stop recording</button>
             <button onClick={recordWebcam.retake}>Retake</button>
             <button onClick={log}>하위 log </button>
             <button onClick={Set}>set </button>
 
           </div>
-          <video ref={recordWebcam.previewRef} autoPlay muted loop />
+          {/* <video ref={recordWebcam.previewRef} autoPlay muted loop /> */}
           {/* <p>Camera status: {recordWebcam.status}</p> */}
         </div>
 
