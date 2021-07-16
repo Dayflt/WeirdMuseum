@@ -2,10 +2,10 @@ import './css/Page.css';
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import star from './img/star110.png';
-import one from './img/1.jpg';
-import two from './img/2.jpg';
-import thr from './img/3.jpg';
-import four from './img/4.jpg';
+import one from './img/1.png';
+import two from './img/2.png';
+import thr from './img/3.png';
+import four from './img/4.png';
 
 const Selection =() => {
 
@@ -24,10 +24,10 @@ const Selection =() => {
           </h3>
             <div className='ImageBox'>
               <div>  
-                <button className='SelectButton' onClick={ ()=> { m_num(0)}}> 1</button>
-                <button className='SelectButton' onClick={ ()=> { m_num(1)}}> 2</button>
-                <button className='SelectButton' onClick={ ()=> { m_num(2)}}> 3</button>
-                <button className='SelectButton' onClick={ ()=> { m_num(3)}}> 4</button>
+                <button className='SelectButton' onClick={ () => { m_num(0)}}> 1</button>
+                <button className='SelectButton' onClick={ () => { m_num(1)}}> 2</button>
+                <button className='SelectButton' onClick={ () => { m_num(2)}}> 3</button>
+                <button className='SelectButton' onClick={ () => { m_num(3)}}> 4</button>
               </div>
                 <div className='InputBox' style={ {marginright: '10%' } }> 
                   <img className='SelectImg' src={ pic[num]} alt="select img"></img>

@@ -85,7 +85,8 @@ def getby_emoji(category_no):
     try:
         datas = views.post_gallery_category(category_no) #list형태로 반환
         result = []
-        num = len(datas)
+        num=len(datas)
+        print(num)
         if num < 4:
             for n in range(num):
                 video = datas[n]

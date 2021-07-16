@@ -2,15 +2,26 @@
 # 우리가 만드는 flask앱을 모듈화 시킨이후에 실행시키기 위해 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
+from flask_restful import Api
+import errors as errors
+from flask_swagger_ui import get_swaggerui_blueprint
+from flask_cors import CORS,cross_origin
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app,resources={r"*": {"origins": "*"}},supports_credentials=True)
+api = Api(app, errors = errors)
 app.config.from_object("web.config.Config")
 db=SQLAlchemy(app)
-
-# app.config['SECRET_KEY']='thisisfirstflaskapp'
-
+# SWAGGER_URL='/swagger'
+# API_URL='/static/swagger.json'
+# SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
+#     SWAGGER_URL,
+#     API_URL,
+#     config={
+#         'app_name': "DAYFLY-Flask-REST-MIXEDVIDEO"
+#     }
+# )
+# app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
 
 
 from web import routes
