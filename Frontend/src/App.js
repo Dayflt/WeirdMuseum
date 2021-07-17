@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+//import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Home from './page/Home';
 import Record from './page/Record';
 import Result from './page/Result';
