@@ -5,6 +5,7 @@ import { useRecordWebcam } from "react-record-webcam";
 import { Setb, Setburl} from "../App";
 
 
+
 const Record = ({ match }) => {
   const { num } = match.params;
   const OPTIONS = { recordingLength: 5, fileType: "mp4" }; // 녹화 제한 시간, 확장자
@@ -22,12 +23,14 @@ const Record = ({ match }) => {
 
   const Set = () => {
     recordWebcam.getRecording().then((respone) => Setblob(respone));
+
     setburl(recordWebcam.previewRef.current.currentSrc);
     //console.log(data);
   };
 
   const log = () => {
     // 로그 확인 용
+    Setblob(recordWebcam.newblob);
     console.log(' 아래는 지역');
     console.log('전역');
   };

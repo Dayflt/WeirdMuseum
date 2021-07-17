@@ -74,8 +74,8 @@ def return_result(model_id):
     elif request.method=='PATCH':
         try:
             f = request.get_json()
-            user_name, category_id = f['user_name'], f['category_id']
-            views.gallery_info(model_id, user_name, category_id)
+            model_name, category_no = f['model_name'], f['category_no']
+            views.gallery_info(model_id, model_name, category_no)
             return jsonify({"success" : True})
         except:
             raise InternalServerError

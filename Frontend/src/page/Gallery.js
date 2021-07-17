@@ -7,47 +7,120 @@ import star from './img/star110.png';
 import axios from 'axios'
 
 const Gallery = () => {
-  const [user, setUser] = useState([{
-    video : "",
-    username : ""
-  }]);
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:5000/api/model/gallery/1')
-  //   .then((Response)=>{
-  //     const user = [];
-
-  //     for(var i =  0; i<Response.data.length; i++){
-  //       // console.log(Response.data[i]);
-  //       user.push({
-  //         video : Response.data[i].model_result,
-  //         username : Response.data[i].model_name
-  //       })
-  //     }
-  //     for(var i=0; i<user.length; i++){
-  //       console.log(user[i].video);
-  //       console.log(user[i].username);
-  //     }
-  //     setUser(user);
-  //   })
-  // }, [])
+  const [user1, setUser1] = useState(null);
+  const [user2, setUser2] = useState(null);
+  const [user3, setUser3] = useState(null);
+  const [user4, setUser4] = useState(null);
+  const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
-    axios.get('http://localhost:5000/api/model/gallery/1')
-    .then((Response)=>{
-      const user1 = [];
-      for(var i =  0; i < Response.data.length; i++){
-        user1.push({
-          video : Response.data[i].model_result,
-          username : Response.data[i].model_name
-        })
+    const fetchUsers = async () => {
+      try{
+        // setUsers(null);
+        setLoading(true);
+        for(var i=1; i<=4; i++){
+          const response = await axios.get('http://localhost:5000/api/model/gallery/'+i);
+          if(i==1) setUser1(response.data);
+          else if(i==2) setUser2(response.data);
+          else if(i==3) setUser3(response.data);
+          else setUser4(response.data);
+        }
+      }catch(e){
+        console.error(e);
       }
-      setUser(user1); //success
-    })
-    // console.log(user);//not really
-  }, [])
+      setLoading(false);
+    };
+    fetchUsers();
+  },[]);
 
-
-  return (<h2>dd</h2>
+  if (loading) 
+    return (
+      <div className="loading_box">
+        <div className="loading">갤러리 로딩중..</div>
+      </div>)
+  if (!user1 || !user2 || !user3 || !user4) return null;
+  else return (
+    <div className="Page">
+      <header className="Page-header">
+        <h1>
+         <img src={star} className="Star-logo" alt="logo"></img>
+             Synthesize Images
+        </h1>
+        <div className="gallery_total">
+          <div className="gallery_category" >
+            <h5>🤣</h5>
+            {user1.map((user , user_id) => (
+              <div className="gallery_no" key={user_id}>
+                <ReactPlayer 
+                  url={user.model_result}
+                  className="gallery_video"
+                  loop="true"
+                  playing="true"
+                  muted="true"
+                  width="60%"
+                  height="60%" />
+                <h6>{user.model_name}</h6>
+              </div>
+            ))}
+          </div>
+          <div className="gallery_category" >
+            <h5>😚</h5>
+            {user2.map((user , user_id) => (
+              <div className="gallery_no" key={user_id}>
+                <ReactPlayer 
+                  url={user.model_result}
+                  className="gallery_video"
+                  loop="true"
+                  playing="true"
+                  muted="true"
+                  width="60%"
+                  height="60%" />
+                <h6>{user.model_name}</h6>
+              </div>
+            ))}
+          </div>
+          <div className="gallery_category" >
+            <h5>🙃</h5>
+            {user3.map((user , user_id) => (
+              <div className="gallery_no" key={user_id}>
+                <ReactPlayer 
+                  url={user.model_result}
+                  className="gallery_video"
+                  loop="true"
+                  playing="true"
+                  muted="true"
+                  width="60%"
+                  height="60%" />
+                <h6>{user.model_name}</h6>
+              </div>
+            ))}
+          </div>
+          <div className="gallery_category" >
+            <h5>😱</h5>
+            {user4.map((user , user_id) => (
+              <div className="gallery_no" key={user_id}>
+                <ReactPlayer 
+                  url={user.model_result}
+                  className="gallery_video"
+                  loop="true"
+                  playing="true"
+                  muted="true"
+                  width="60%"
+                  height="60%" />
+                <h6>{user.model_name}</h6>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="button_box">
+          <Link to ="../">  
+            <button className="RetryButton"> 
+              TRY AGAIN
+            </button>
+          </Link>
+        </div>
+      </header>
+    </div>
   )
 }
 
