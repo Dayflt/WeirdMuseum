@@ -10,12 +10,5 @@ RUN npm install --save --legacy-peer-deps
 #현재 디렉토리의 모든걸 /app에 저장
 COPY . .
 
-# ENV REACT_APP_NAME=myName
-
-#Dev
-# EXPOSE 3000
-# CMD ["npm","start"]
-
 #Prod
-# RUN ["npm", "run", "build"]
-# CMD ["npm", "run", "build"]
+RUN ["npm", "run", "build"]
