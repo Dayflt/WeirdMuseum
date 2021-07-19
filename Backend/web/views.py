@@ -1,5 +1,5 @@
 from web.models import video_table
-
+from sqlalchemy.sql.elements import Null
 from operator import mod, pos
 
 from flask_sqlalchemy import model
@@ -26,6 +26,8 @@ def get_model_id(model_result):
 def get_video_url(model_id):
     "gets model_result from model_id"
     a= db.session.query(video_table).filter(video_table.model_id==model_id).first()
+    if a == Null:
+        return False
     return a.model_result
 
 #model_id받았을 때 해당 db삭제
@@ -35,14 +37,25 @@ def remove_vid(model_id):
     db.session.delete(remove)
     db.session.commit()
 
+def check_overlap(model_name):
+    "check username doesn't overlap"
+    if (db.session.query(video_table).filter(video_table.model_name==model_name).first())==None:
+        return True
+    else:
+        return False
+
 #사용자가 gallery에 disply 원할 경우 닉네임(model_name), category_no입력받아 해당 model_id db에 저장
 def gallery_info(model_id,model_name,category_no):
     "uploads information for uploading video on gallery"
     post=db.session.query(video_table).filter(video_table.model_id==model_id).first()
+    if post == Null:
+        return False
     post.model_name=model_name
     post.category_no=category_no
     post.model_date=sql.func.now()#str(dt.datetime.now())
     db.session.commit()
+    return True
+
 
 #category_no에 해당하는 영상 list형태로 반환
 def post_gallery_category(category_no):
