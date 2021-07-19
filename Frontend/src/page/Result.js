@@ -24,7 +24,7 @@ const Result =() => {//앞에서 넘겨온 id참조, 프록시 5000으로  "prox
   const deleteModel = () =>{
     axios.delete('http://localhost:5000/api/model/'+model_id)
     .then(response => {
-      console.log(response);
+      console.log(response.data);
     })
     .catch(error => {
       console.log(error);
