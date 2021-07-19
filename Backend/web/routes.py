@@ -82,14 +82,10 @@ def return_result(model_id):
             if (request.get_json()==None):
                 abort(500,"No request")
             f = request.get_json()
-<<<<<<< HEAD
-            user_name, category_id = f['model_name'], f['category_no']
-=======
             try:
                 user_name, category_id = f['model_name'], f['category_no']
             except:
                 return abort(500,"Wrong request(there is no model_name or category_no)")
->>>>>>> main
             views.gallery_info(model_id, user_name, category_id)
             return jsonify({"success" : True})
         except:
