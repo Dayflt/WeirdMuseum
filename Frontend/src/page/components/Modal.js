@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 //import { Link } from "react-router-dom";
 import axios from 'axios'
-import "../css/modal.css";
+import "../css/Modal.css";
 import { store } from 'react-notifications-component';
 import ReactNotification from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'

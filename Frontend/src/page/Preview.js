@@ -1,6 +1,6 @@
 import "./css/Page.css";
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import one from "./img/1.png";
 import two from "./img/2.png";
 import thr from "./img/3.png";
@@ -16,6 +16,8 @@ const Preview = ({ match }) => {
   const { num } = match.params;
   const data = useContext(Bdata);
   const burl = useContext(Burl);
+
+  const history = useHistory(); // 추가
 
   const [loadings, set_load] = useState(false);
   const [result, set_result] = useState(false);
@@ -45,8 +47,12 @@ const Preview = ({ match }) => {
       set_result(true); // respone을 받으면 재랜더링
       if (response.data.success) {
         model = response.data.model_id;
-        window.location.href="../Result/" + model     
+        history.push({
+          pathname: "/Result",
+          state: {model_id: model}
+        });
       } else {
+        console.log(response.data.message);
         set_load(false);
         alert("업로드 실패");
       } 
