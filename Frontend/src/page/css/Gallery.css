@@ -11,6 +11,11 @@
 .loading{
   font-size: 100%;
 }
+.gallery_total{
+  display: inline;
+  width: auto;
+  height: auto;
+}
 .gallery_category{
     display: inline-grid;
     width: 20%;
@@ -34,7 +39,7 @@
     text-align: center;
     color: black;
     border-radius: 15px;
-    font-size: 150%;
+    font-size: 180%;
     margin: 3%;
     padding: 3% 6% 3% 6%;
     font-family: 'Jua', sans-serif;

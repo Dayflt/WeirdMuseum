@@ -58,8 +58,8 @@ const Result =() => {//앞에서 넘겨온 id참조, 프록시 5000으로  "prox
             loop="true"
             playing="true"
             muted="true"
-            width="60%"
-            height="60%">
+            width="50%"
+            height="50%">
           </ReactPlayer>
         </div>
         <div className="button_box1">

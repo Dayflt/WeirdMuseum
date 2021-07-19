@@ -66,14 +66,14 @@
     clear: both;
 }
 .StartButton {
-    background-color: #c4c4c4;
-    text-align: center;
-    color: black;
-    border-radius: 15px;
-    font-size: 250%;
-    font-family: 'Jua', sans-serif;
-    margin: 2%;
-    padding: 3% 6% 3% 6%;
+  background-color: #c4c4c4;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  font-size: 250%;
+  font-family: 'Jua', sans-serif;
+  margin: 2%;
+  padding: 3% 6% 3% 6%;
 }
 .GalleryButton {
   text-align: center;
@@ -145,7 +145,6 @@
     font-size: 20px;
   }
   .SaveButton{
-    font-size: 25px;
     margin: 15px 5% 0 0 ;
   }
   .ShareButton{
