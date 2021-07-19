@@ -20,10 +20,14 @@ const Gallery = () => {
         setLoading(true);
         for(var i=1; i<=4; i++){
           const response = await axios.get('http://localhost:5000/api/model/gallery/'+i);
-          if(i==1) setUser1(response.data);
-          else if(i==2) setUser2(response.data);
-          else if(i==3) setUser3(response.data);
-          else setUser4(response.data);
+          if(response.data.success){
+            if(i==1) setUser1(response.data.data);
+            else if(i==2) setUser2(response.data.data);
+            else if(i==3) setUser3(response.data.data);
+            else setUser4(response.data.data);
+          }else{
+            console.log(response.data.message);
+          }
         }
       }catch(e){
         console.error(e);
