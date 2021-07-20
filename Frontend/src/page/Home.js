@@ -3,15 +3,15 @@ import './css/Home.css';
 import React from 'react';
 import { Link } from "react-router-dom";
 import star from './img/star110.png';
-import photo from'./img/test18667mixed.mp4'
+import video1 from'./img/test18667mixed.mp4'
 
 const Home =() => {
   return (
     <div className="Page">
       <header className="Page-header">
         <h1>
-         <img src={star} className="Star-logo" alt="logo"></img>
-             Synthesize Images
+          <img src={star} className="Star-logo" alt="logo"></img>
+          ᗯᗴIᖇᗪ ᗰᑌᔕᗴᑌᗰ
         </h1>
         <h4>
           START 버튼을 눌러 시작하세요!
@@ -33,10 +33,10 @@ const Home =() => {
             </h5>
           </div>
         </div>
-        <div className="photo_box">
-          <video src={photo} autoPlay loop></video>
-          <video src={photo} autoPlay loop></video>
-          <video src={photo} autoPlay loop></video>
+        <div className="video_box">
+          <video src={video1} autoPlay loop></video>
+          <video src={video1} autoPlay loop></video>
+          <video src={video1} autoPlay loop></video>
         </div>
         
         <div className="button_box">
