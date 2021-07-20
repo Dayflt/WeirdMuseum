@@ -19,7 +19,7 @@ const Gallery = () => {
         // setUsers(null);
         setLoading(true);
         for(var i=1; i<=4; i++){
-          const response = await axios.get('http://localhost:5000/api/model/gallery/'+i);
+          const response = await axios.get('http://133.186.247.48:5000/api/model/gallery/'+i);
           if(response.data.success){
             if(i==1) setUser1(response.data.data);
             else if(i==2) setUser2(response.data.data);

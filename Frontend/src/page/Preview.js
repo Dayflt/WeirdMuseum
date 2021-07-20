@@ -41,7 +41,7 @@ const Preview = ({ match }) => {
     
     
     set_load(true); // 로딩 시작 재랜더링
-    await axios.post("http://localhost:5000/api/model", formData, config)
+    await axios.post("http://133.186.247.48:5000/api/model", formData, config)
     .then((response) => {
       set_load(false);
       set_result(true); // respone을 받으면 재랜더링
