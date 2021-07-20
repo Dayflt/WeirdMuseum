@@ -49,7 +49,7 @@ const Modal = ( props) => {
       .then(response=>{
         console.log(response.data);
       });
-      window.location.href="../Gallery"
+      window.location.href="../gallery"
     }catch(error) {
       console.log(error);
       console.log({model_id});
