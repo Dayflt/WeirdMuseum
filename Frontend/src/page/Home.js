@@ -3,7 +3,8 @@ import './css/Home.css';
 import React from 'react';
 import { Link } from "react-router-dom";
 import star from './img/star110.png';
-import video1 from'./img/test18667mixed.mp4'
+import video1 from'./img/ex1.mp4'
+import video2 from'./img/ex2.mp4'
 
 const Home =() => {
   return (
@@ -13,9 +14,9 @@ const Home =() => {
           <img src={star} className="Star-logo" alt="logo"></img>
           ᗯᗴIᖇᗪ ᗰᑌᔕᗴᑌᗰ
         </h1>
-        <h4>
+        <h3>
           START 버튼을 눌러 시작하세요!
-        </h4>
+        </h3>
         <div className="step_box">
           <div className="step">
             <h5>
@@ -34,9 +35,9 @@ const Home =() => {
           </div>
         </div>
         <div className="video_box">
+          <video src={video2} autoPlay loop></video>
           <video src={video1} autoPlay loop></video>
-          <video src={video1} autoPlay loop></video>
-          <video src={video1} autoPlay loop></video>
+          <video src={video2} autoPlay loop></video>
         </div>
         
         <div className="button_box">

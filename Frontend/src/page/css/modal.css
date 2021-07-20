@@ -93,7 +93,7 @@ input{
     font-size: 40px;
   }
 }
-@media all and (max-width:320px){
+@media all and (max-width:360px){
     input{
     width: 80%;
     font-size: 30px;
