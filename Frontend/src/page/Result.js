@@ -22,7 +22,7 @@ const Result =() => {//앞에서 넘겨온 id참조, 프록시 5000으로  "prox
     setModalOpen(false);
   }
   const deleteModel = () =>{
-    axios.delete('http://133.186.247.48:5000/api/model/'+model_id)
+    axios.delete('http://localhost:5000/api/model/'+model_id)
     .then(response => {
       console.log(response.data);
     })
