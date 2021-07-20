@@ -33,13 +33,14 @@
 }
 .gallery_no > h6{
     margin: 0;
+    font-size: 90%;
 }
 .RetryButton {
     background-color: #c4c4c4;
     text-align: center;
     color: black;
     border-radius: 15px;
-    font-size: 180%;
+    font-size: 170%;
     margin: 3%;
     padding: 3% 6% 3% 6%;
     font-family: 'Jua', sans-serif;
@@ -49,9 +50,19 @@
 @media all and (max-width:960px){
 }
 @media all and (max-width:768px){
+  .gallery_no > h6{
+    margin: 0;
+    font-size: 60%;
+  }
   .RetryButton {
-    font-size: 25px;
+    font-size: 100%;
   }
 }
 @media all and (max-width:360px){
+  .Page-header h1 {
+    font-size: 120%;
+  }
+  .RetryButton {
+    font-size: 80%;
+  }
 }
