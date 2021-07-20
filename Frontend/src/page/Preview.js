@@ -16,8 +16,7 @@ const Preview = ({ match }) => {
   const { num } = match.params;
   const data = useContext(Bdata);
   const burl = useContext(Burl);
-
-  const history = useHistory(); // 추가
+  const history = useHistory();
 
   const [loadings, set_load] = useState(false);
   const [result, set_result] = useState(false);
@@ -30,7 +29,7 @@ const Preview = ({ match }) => {
     border-color: #ffffff;
   `;
 
-  const send =  async() => {
+  const send = async() => {
     const formData = new FormData();
     const file = new File([data], 'test.mp4', { type: 'video/mp4'})
     const config = {
@@ -52,7 +51,6 @@ const Preview = ({ match }) => {
           state: {model_id: model}
         });
       } else {
-        console.log(response.data.message);
         set_load(false);
         alert("업로드 실패");
       } 
@@ -76,18 +74,20 @@ const Preview = ({ match }) => {
           {!loadings && !result ? (
             <div>
               <h3>선택한 것들!</h3>
-              <div className="InputBox">
-                <img
-                  className="SelectImg"
-                  src={pic[num]}
-                  alt="select img"
-                ></img>
-              </div>
-              <div className="Plus-logo">
-                <img className="Plus-logo" src={plus} alt="plus img"></img>
-              </div>
-              <div className="InputBox">
-                <video src={burl} autoPlay muted loop />
+              <div className="ImageBox">
+                <div className="InputBox">
+                  <img
+                    className="SelectImg"
+                    src={pic[num]}
+                    alt="select img"
+                  ></img>
+                </div>
+                <div className="Plus-logo">
+                  <img className="Plus-logo" src={plus} alt="plus img"></img>
+                </div>
+                <div className="InputBox">
+                  <video src={burl} autoPlay muted loop />
+                </div>
               </div>
             </div>
           ) : result ? (
