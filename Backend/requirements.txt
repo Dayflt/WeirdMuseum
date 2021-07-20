@@ -40,6 +40,7 @@ packaging==21.0
 pandas==1.3.0
 Pillow==8.3.1
 protobuf==3.17.3
+#psycopg2==2.9.1
 psycopg2-binary
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -66,7 +67,9 @@ tqdm==4.61.2
 typing-extensions==3.10.0.0
 urllib3==1.26.6
 Werkzeug==2.0.1
-gunicorn==20.1.0
+pyrsistent==0.18.0
+flask-swagger-ui==3.36.0
 flask_cors==3.0.10
-flask_swagger_ui==3.36.0
-
+python-dotenv==0.18.0
+pytest==6.2.4
+gunicorn==20.1.0
