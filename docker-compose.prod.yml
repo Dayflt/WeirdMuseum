@@ -25,6 +25,7 @@ services:
    
     nginx:
         build: ./nginx
+        container_name: nginx
         ports:
             - "80:80"
             - "443:443"
@@ -42,9 +43,12 @@ services:
     certbot:
         image: certbot/certbot
         restart: unless-stopped
-        volumes : 
+        container_name: certbot
+        volumes: 
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/www:/var/www/certbot
+        depends_on:
+            - nginx
         entrypoint : "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
 volumes:
