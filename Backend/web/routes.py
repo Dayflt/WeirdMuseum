@@ -30,11 +30,14 @@ def load_file():
 def upload_file():
     if request.method == 'POST':
         try:
+            print('Starting')
             img_name=request.form['image_no']
             f = request.files['file']
             f.save(secure_filename(f.filename))
             return mixvideo(img_name, f.filename)
         except:
+            #print('passed')
+            #pass
             abort(500,"Something wrong")
 
 # AI모델 결과물 생성
@@ -44,8 +47,9 @@ def mixvideo(img_name,file_name):
     #cap_vid = request.form['src'].split(':')[-1]
     # byte 형태로 생성함 -> google cloud에 upload -> 반환된 url주소를 이용 -> 다음 페이지에서 영상을 송출
     # 캡쳐된 영상은 코드 디렉토리에 저장
-    
+    print('mixing start')
     mixedvid = generate('web/AI/mraa.yaml', 'web/AI/mraa.tar', 'web/AI/img/%s.png' %(str(img_name)), '%s' %(file_name))
+    print('mixing ended')
     del_vid(file_name, True)
     print('deleted cap')
     views.video_insert(mixedvid,img_name)

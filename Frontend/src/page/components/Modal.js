@@ -38,7 +38,7 @@ const Modal = ( props) => {
     }
     try{
       await axios
-      .patch('http://localhost:5000/api/model/'+model_id, {
+      .patch('http://133.186.247.48:5000/api/model/'+model_id, {
         model_name : nickname,
         category_no: parseInt(emoticon)
       },{

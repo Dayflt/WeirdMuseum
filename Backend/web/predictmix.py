@@ -3,6 +3,7 @@ import imageio
 from skimage.transform import resize
 from skimage import img_as_ubyte
 from web.gcp import upload_vid
+import torch 
 
 from web.views import *
 import os, math, random
@@ -12,7 +13,7 @@ def remake_vidname(vid_name):
     return vid_name
 
 def del_vid(vid_name, cap = True):
-    "if cap = True : cap vid, if cap = False : mixed vid"
+    #if cap == True : cap vid if cap = False : mixed vid
     if cap:
         os.remove(os.path.join(os.getcwd(), vid_name))
     else:
@@ -20,7 +21,17 @@ def del_vid(vid_name, cap = True):
         os.remove(os.path.join(os.getcwd(), 'web/data/result/%s.mp4'%vid_name))
 
 def generate(config_path, cp_path , source_img, driving_video):
-    "mixes video with AI and saves mixed vid in local and bucket"
+    #mixes video with AI and saves mixed vid in local and bucket
+    if torch.cuda.is_available():
+        print(torch.cuda.current_device())
+        print(torch.cuda.device_count())
+        print(torch.cuda.get_device_name(0))
+        print('CUDA AVAILABLE')
+    else:
+        print('USING CPU')
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(device)
     vid_name = driving_video.split('.')[0]
     # imageio.get_reader(URI)를 이를 이용해서 이미지를 이진 데이터로 읽는 것이 충분히 가능
     # 지금 해야 하는 것은 blob으로 받아온 영상을, 즉 영상을 이미지단위로 나누어서 blob으로 받아오는 것이기 때문에 
@@ -42,10 +53,10 @@ def generate(config_path, cp_path , source_img, driving_video):
     driving_video = [resize(frame, (256, 256)) for frame in driving_video]
 
     # load model
-    model_gen, model_kp = load_checkpoints(config_path, cp_path, cpu = True)
+    model_gen, model_kp = load_checkpoints(config_path, cp_path, device, cpu = True)
     
     # numpy array 형태로 영상 반환
-    vid = make_animation(source_img, driving_video, 
+    vid = make_animation(source_img, driving_video, device,
         generator = model_gen, kp_detector = model_kp, relative = True, adapt_movement_scale = True, cpu = True)
     vid = [img_as_ubyte(frame) for frame in vid]
     # numpy array -> mp4
