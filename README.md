@@ -6,7 +6,7 @@
 
 
 
-## ✏️ Getting Started (Prerequisities & Installing) ( Follow 4 steps)
+## ✏️ Getting Started (Prerequisities & Installing & Running)
 
 ### 1. Cloning
 ```
@@ -39,27 +39,61 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   video=# \dt                           #video db와 연결된 모든 테이블 보기
   video=# select * from video_info;     #video_info에 저장된 값 모두 보기
    ```
-  
-  #### Production environment 
+  - Running 
   ```
+  http://localhost:5000         # Flask application
+  http://localhost:5000/swagger # Swagger
+  http://localhost:3000           # React application
+  ```
+  
+  #### Production environment
+  
+  1. Check whether 80 and 443 ports are open 
+  
+  2. Modify configuration
+  - Change *domains* and *email addresses* in init-letsencrypt.sh
+  - Replace all occurrences of *weirdmuseum.ml* with your domain ex) server_name museum.ml -> server_name 'your domain'
+  
+  3. Run the init script to obtain SSL Certificates and Credentials (./certbot directory will be created)
+  ```
+  $ chmod +x ./init-letsencrypt.sh  # Make it executable
+  $ ./init-letsencrypt.sh            # Run the init script
+  ```
+  
+  4. Check the status of your service
+  ```
+  $ docker ps                       # See running containers
+  ```
+ 
+ 5. Once you obtain SSL Certificates and Credentials, use the commands below to run, stop or rerun the containers.
+ ```
   $ docker-compose -f docker-compose.prod.yml up --build
   $ docker-compose down #stop running containers
   $ docker- compose -f docker-compose.prod.yml up # rerun containers
   or
   $ docker-compose down # stop running containers and delete its volume
   ```
+   
+  - Running (based on our domain)
+  ```
+  https://museum.ml             # Nginx 
+  ```
   
   #### etc
   ```
   $ docker ps #See running containers
   $ docker ps -a #See all containers
+  $ docker-compose logs [service_name]  #Check the service logs
   $ docker images # See all built images
+  $ docker-compose rm -f $(docker ps -a -q) #remove all containers
   $ docker volume ls # See volumes
   $ docker images prune # remove untagged(none) images
   $ docker network prune # remove all unused network
   $ docker volume prune  # remove all unused local volume
   ```
-  
+### 📗 SWAGGER
+![20210717_195035](https://user-images.githubusercontent.com/79822913/126034610-20bff471-7e80-48c8-88f8-c30e28dfd37d.png)
+
 ### 👀 Used Model
 [Transfer model](https://github.com/AliaksandrSiarohin/first-order-model)  
         
