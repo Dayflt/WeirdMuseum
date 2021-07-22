@@ -110,31 +110,31 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 
 ## 🔧 Directory Structure
 ```bash
-├── README.md                                            - 리드미 파일
+├── README.md                                          - 리드미 파일
 │
-├── Backend/                                              - 백엔드 플라스크 디렉토리
-│   ├── Dockerfile                                        - 백앤드 도커파일
-│   ├── run.py                
-│   ├── views.py               - SQLAlchamy의 기능을 정의한 파일
+├── Backend/                                           - 백엔드 플라스크 디렉토리
+│   ├── Dockerfile                                     - 백앤드 도커파일
+│   ├── run.py                                         - Flask 실행 위한 파일
+│   ├── views.py               -                       - SQLAlchamy의 기능을 정의한 파일
 │   ├── dayfly-318913-a4b443321e00.json         
 │   ├── requirements.txt                               - 모듈들을 정리한 파일
 │   └── web/
 │        ├── AI/                                       - AI모델 알고리즘
-│        ├── data/result/                              - 백엔드 동영상 임시 저장 디렉토리
+│        ├── data/result/                              - 영상 임시 저장 디렉토리
 │        ├── __init__.py
-│        ├── config.py
+│        ├── config.py                                 - postgreSQL와 연결 설정
 │        ├── gcp.py
-│        ├── models.py
+│        ├── models.py                                 - postgreSQL 모델 설정
 │        ├── prdedictmix.py
-│        ├── routes.py
-│        ├── views.py
+│        ├── routes.py                                 - api 함수 정의
+│        ├── views.py                                  - database ORM 정의 파일
 │        └── static/
-│              └── swagger.json 
+│              └── swagger.json                        - swagger 정의 파일
 │
 ├── Frontend/
 │   ├── Dockerfile                                    - 프론트앤드 도커파일
-│   ├── public/    
-│   ├── package.json & package.lock.json    
+│   ├── public/                                       - 프론트앤드 디폴트 디렉토리
+│   ├── package.json & package.lock.json           
 │   └── src/ 
 │        ├── App.js & App.test.js & setupTest.js
 │        ├── App.css
@@ -142,25 +142,26 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 │        └── page/
 │   	        ├── css /                              - 컴포넌트들의 css
 │   	        ├── imgs /                             - 컴포넌트들의 image
-│   	        ├── Gallery.js          
-│   	        ├── Home.js         
-│   	        ├── Preview.js         
-│   	        ├── Record.js         
-│   	        ├── Result.js        
-│   	        ├── Selection.js  
-│   	        └── components/  
+│   	        ├── Gallery.js                         - 갤러리 페이지
+│   	        ├── Home.js                            - 메인 페이지
+│   	        ├── Preview.js                         - Preview 페이지
+│   	        ├── Record.js                          - 웹캠 페이지
+│   	        ├── Result.js                          - 결과물 페이지
+│   	        ├── Selection.js                       - 사진 선택 페이지
+│   	        └── components/                        
 │                   └── Modal.js
 ├── Nginx/
-│   ├── Dockerfile                                 - Nginx 도커파일
-│   └── nginx.conf
+│   ├── Dockerfile                                    - nginx 도커파일
+│   └── nginx.conf                                    - nginx 설정파일
 │
-├── Settings/                                      -  환경변수 설정 파일
-│   ├── dev/        
-│   │    └── .env.dev
+├── Settings/                                         -  환경변수 설정 파일
+│   ├── dev/                                              
+│   │    └── .env.dev                                 -  개발환경변수 설정 파일
 │   └── prod/
-│        └── .env.prod
-├── docker-compose.yml                                - 개발용
-├── docker-compose.prod.yml                           - 배포용 
+│        └── .env.prod                                -  배포환경변수 설정 파일
+├── docker-compose.yml                                - 개발용 docker-compose파일
+├── docker-compose.prod.yml                           - 배포용 docker-compose파일
+├── init-letsencrypt.sh                               - SSL인증서 발급받기 위한 과정을 자동화시킨 스크립트파일 
 └── .gitignore		
 ```  
 
