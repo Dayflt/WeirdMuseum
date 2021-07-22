@@ -42,12 +42,12 @@ const Home =() => {
         
         <div className="button_box">
           <Link to ="./Selection">
-            <button className="StartButton">
+            <button className="StartButton" type="button" class="btn btn-dark">
               START!
             </button>
           </Link>
           <Link to ="./Gallery">
-            <button className="GalleryButton">
+            <button className="GalleryButton" type="button" class="btn btn-outline-dark">
               갤러리보러가기
             </button>
           </Link>

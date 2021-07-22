@@ -40,6 +40,29 @@
   text-align: center;
 }
 
+.RunButton {
+  background-color: #c4c4c4;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  width: 300px;
+  height: 120px;
+  font-size: 45px;
+  font-family: 'Jua', sans-serif;
+  margin: 30px;
+}
+
+.un_RunButton {
+  background-color: #575757;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  width: 300px;
+  height: 120px;
+  font-size: 45px;
+  font-family: 'Jua', sans-serif;
+}
+
 .ImageBox{
   display:inline-flex; 
   align-items: center;
