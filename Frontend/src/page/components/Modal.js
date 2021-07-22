@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React, { useState } from 'react';
 //import { Link } from "react-router-dom";
-import axios from 'axios'
+import api from '../../api.jsx';
 import "../css/Modal.css";
 import { store } from 'react-notifications-component';
 import ReactNotification from 'react-notifications-component';
@@ -37,8 +37,8 @@ const Modal = ( props) => {
       return false;
     }
     try{
-      await axios
-      .patch('http://localhost:5000/api/model/'+model_id, {
+      await api
+      .patch('/api/model/'+model_id, {
         model_name : nickname,
         category_no: parseInt(emoticon)
       },{

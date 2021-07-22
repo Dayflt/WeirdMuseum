@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
 import star from './img/star110.png';
-import axios from 'axios'
+import api from '../api.jsx';
 
 const Gallery = () => {
   const [user1, setUser1] = useState(null);
@@ -19,7 +19,7 @@ const Gallery = () => {
         // setUsers(null);
         setLoading(true);
         for(var i=1; i<=4; i++){
-          const response = await axios.get('http://localhost:5000/api/model/gallery/'+i);
+          const response = await api.get('api/model/gallery/'+i);
           if(response.data.success){
             if(i==1) setUser1(response.data.data);
             else if(i==2) setUser2(response.data.data);
