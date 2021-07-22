@@ -42,7 +42,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   
   #### Production environment 
   ```
-  $ docker-compose -f docker.compose.prod.yml up --build
+  $ docker-compose -f docker-compose.prod.yml up --build
   $ docker-compose down #stop running containers
   $ docker- compose -f docker-compose.prod.yml up # rerun containers
   or
