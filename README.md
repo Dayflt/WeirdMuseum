@@ -35,9 +35,9 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
    ```
   $ docker-compose exec postgres_db psql --username=postgres --dbname=video
   (psql)
-  video=# \l                            #
-  video=# \dt                           #video db와 연결된 모든 테이블 보기
-  video=# select * from video_info;     #video_info에 저장된 값 모두 보기
+  video=# \l                            #list all databases
+  video=# \dt                           #list all tables in the current database
+  video=# select * from video_info;     #list all data of video_info table
    ```
   - Running 
   ```
