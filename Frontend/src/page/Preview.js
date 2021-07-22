@@ -7,7 +7,7 @@ import thr from "./img/3.png";
 import four from "./img/4.png";
 import plus from "./img/plus.png";
 import star from "./img/star110.png";
-import axios from "axios";
+import api from '../api.jsx';
 import { Bdata, Burl } from "../App";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { css } from "@emotion/react";
@@ -40,7 +40,7 @@ const Preview = ({ match }) => {
     
     
     set_load(true); // 로딩 시작 재랜더링
-    await axios.post("http://localhost:5000/api/model", formData, config)
+    await api.post("/api/model", formData, config)
     .then((response) => {
       set_load(false);
       set_result(true); // respone을 받으면 재랜더링

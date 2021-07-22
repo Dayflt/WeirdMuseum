@@ -1,8 +1,8 @@
 // eslint-disable-next-line
 import React, { useState } from 'react';
 //import { Link } from "react-router-dom";
-import axios from 'axios'
-import "../css/modal.css";
+import api from '../../api.jsx';
+import "../css/Modal.css";
 import { store } from 'react-notifications-component';
 import ReactNotification from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
@@ -37,8 +37,8 @@ const Modal = ( props) => {
       return false;
     }
     try{
-      await axios
-      .patch('http://localhost:5000/api/model/'+model_id, {
+      await api
+      .patch('/api/model/'+model_id, {
         model_name : nickname,
         category_no: parseInt(emoticon)
       },{
@@ -58,7 +58,6 @@ const Modal = ( props) => {
       message("ERROR", "Please check the console for an error message.", "warning")
       setNickname("");
       setEmoticon("");
-      //window.location.href="../Gallery"
     }
   }
 
@@ -90,50 +89,3 @@ const Modal = ( props) => {
   )
 }
 export default Modal;
-
-
-  /*function addCustomer(){
-    const url ='/api/model/{model_id}';
-    const formData = new FormData();
-    formData.append('model_name',this.userNickname)
-    formData.append('category_id',this.userEmoticon)
-    formData.append('model_id',this.video)
-    const config = {
-      Headers:{
-        'content-type':'multipart/form-data'
-      }
-    }
-    return post(url, formData,config)
-  }*/
-
-  /*<form onSubmit={this.handleFormSubmit}>
-    <input required type="text" name="nickname" placeholder="닉네임" value={this.state.userNickname} onChange={this.handleValueChange}/>
-    <select className="emoticon" name="emoticon" value={this.state.userEmoticon} onChange={this.handleValueChange}>
-  */
-  /*const clickSave = async () => {
-    if (nickname==="") {
-      message("확인", "닉네임과 이모티콘을 선택해주세요", "default")
-      return false;
-    }
-    try {
-      await axios
-      .post("/save_image", {
-        author: nickname,
-        url: props.url
-      }, {
-        header: {
-          "content-type": "application/json",
-        },
-      })
-      .then(response => { 
-        // db 저장 성공
-        console.log(JSON.stringify(response.data));   
-      });
-    } catch (error) {
-      console.log(error);
-      message("ERROR", "Please check the console for an error message.", "warning")
-      seNickname("");
-    }
-  }
-  onSubmit={this.handleSubmit} action="http://localhost:5000/result"
-  */

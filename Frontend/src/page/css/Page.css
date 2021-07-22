@@ -14,11 +14,6 @@
   text-align: center;
 }
 
-.Page-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .Star-logo {
   height: 5vmin;
   pointer-events: none;
@@ -57,10 +52,30 @@
   margin: 30px;
 }
 
+.un_RunButton {
+  background-color: #575757;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  width: 300px;
+  height: 120px;
+  font-size: 45px;
+  font-family: 'Jua', sans-serif;
+}
+
 .ImageBox{
   display:inline-flex; 
   align-items: center;
   text-align: center;
+}
+
+.SelectButton {
+  text-align: center;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  font-size: 2em;
+  display: block;
+  margin: 50px;
 }
 
 .InputBox {
@@ -80,14 +95,15 @@
   object-fit: contain;
 }
 
-
-.SelectButton {
-  text-align: center;
+.RunButton {
   background-color: #c4c4c4;
-  border-radius: 10px;
-  font-size: 2em;
-  display: block;
-  margin: 80px;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  padding: 3% 7% 3% 7%;
+  font-size: 150%;
+  font-family: 'Jua', sans-serif;
+  margin: 0 5% 2% 5%;
 }
 
 .RecordButton {

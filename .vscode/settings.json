@@ -1,8 +1,0 @@
-{
-    "python.pythonPath": "backend/venv/bin/python3",
-    "python.autoComplete.extraPaths": ["./backend"],
-    "python.analysis.extraPaths": ["./backend"],
-    "python.languageServer": "Pylance",
-    "python.venvPath": "${workspaceFolder}/backend/venv",
-    
-}

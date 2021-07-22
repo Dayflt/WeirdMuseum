@@ -1,13 +1,10 @@
 # Weird Museum - Dayfly
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 <b> 👻 Weird Museum 👻</b> is a web service where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target image by just taking a short video clip.
 
----
 
-## 👨‍👧‍👦 Member
-| 김서연 | 방근영 | 이지혜 | 장현우 | 김하은 |
-| :----: | :----: | :----: |:----: | :----: |
-| [@ksy991018](https://github.com/ksy991018) | [@banggu0321](https://github.com/banggu0321) | [@penguin1109](https://github.com/penguin1109) |[@aswooo](https://github.com/aswooo) |[@harloxx](https://github.com/harloxx) |
 
 ## ✏️ Getting Started (Prerequisities & Installing) ( Follow 4 steps)
 
@@ -38,14 +35,14 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
    ```
   $ docker-compose exec postgres_db psql --username=postgres --dbname=video
   (psql)
-  video=# \l                            #모든 db목록 보기
+  video=# \l                            #
   video=# \dt                           #video db와 연결된 모든 테이블 보기
   video=# select * from video_info;     #video_info에 저장된 값 모두 보기
    ```
   
   #### Production environment 
   ```
-  $ docker-compose -f docker.compose.prod.yml up --build
+  $ docker-compose -f docker-compose.prod.yml up --build
   $ docker-compose down #stop running containers
   $ docker- compose -f docker-compose.prod.yml up # rerun containers
   or
@@ -132,3 +129,14 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 ├── docker-compose.prod.yml                           - 배포용 
 └── .gitignore		
 ```  
+
+### 🔍 Other repos
+- [Backend repository](https://github.com/Dayflt/Backend.git)  
+- [Frontend repository](https://github.com/Dayflt/Frontend.git)
+
+## 👨‍👧‍👦 Contributors
+| 김서연 (Leader) | 방근영 | 이지혜 | 장현우 | 김하은 |
+| :----: | :----: | :----: |:----: | :----: |
+| [@ksy991018](https://github.com/ksy991018) | [@banggu0321](https://github.com/banggu0321) | [@penguin1109](https://github.com/penguin1109) |[@aswooo](https://github.com/aswooo) |[@harloxx](https://github.com/harloxx) |
+| DevOps, Backend | Frontend | AI, Backend |Frontend |AI, Backend |
+
