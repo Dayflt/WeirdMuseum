@@ -25,59 +25,105 @@
   border-radius: 10px;
   border: solid 1.5px #f6f7fa;
   margin: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   background-color: white;
   margin-bottom: 10px;
   font-family: 'Roboto', sans-serif;
-  font-size: 25px;
 }
-.step_bigbox{
-  text-align: center;
+.Page-header h1 {
+  font-size: 200%;
+  padding: 4% 0 0 0;
+  margin: 2% 0 2% 0 ;
+}
+.Page-header h3 {
+  font-size: 100%;
+  padding: 0;
+  margin: 0 0 2% 0 ;
 }
 .step_box{
   background-color: #c4c4c4;
   display: inline-block;
   padding: 5px;
-  width: 70%;
+  width: 80%;
 }
 .step{
   display: inline-block;
   padding: 0 20px 0 20px;
-  font-size: 20px;
+  font-size: 100%;
 }
-.arrow{
-  display: inline-block;
+.step h5 {
+  padding: 0;
+  margin: 15% 0 15% 0 ;
 }
-.photo_box{
+.video_box{
     clear: both;
 }
-.photo_box img{
+.video_box video{
     width: 15vmin;
     height: 15vmin;
     margin: 3%;
+    border-radius: 10%;
+}
+.result_box{
+  text-align: center;
+}
+.result{
+  display: inline-block;
 }
 .button_box{
     clear: both;
 }
 .StartButton {
-    background-color: #c4c4c4;
-    text-align: center;
-    color: black;
-    border-radius: 15px;
-    font-size: 200%;
-    font-family: 'Jua', sans-serif;
-    margin: 3%;
-    padding: 4% 7% 4% 7%;
+  background-color: #c4c4c4;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  font-size: 250%;
+  font-family: 'Jua', sans-serif;
+  margin: 2%;
+  padding: 3% 6% 3% 6%;
 }
 .GalleryButton {
   text-align: center;
   background-color: #c4c4c4;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 120%;
   padding: 2%;
+  margin: 2%;
   vertical-align: middle;
   font-family: 'Jua', sans-serif;
 }
+.SaveButton {
+  text-align: center;
+  background-color: #c4c4c4;
+  border-radius: 30px;
+  font-size: 30px;
+  margin: 15px 10% 0 0 ;
+  padding: 1% 2% 1% 2% ;
+  vertical-align: middle;
+  font-family: 'Jua', sans-serif;
+}
+.ShareButton {
+  text-align: center;
+  background-color: #c4c4c4;
+  border-radius: 30px;
+  font-size: 30px;
+  margin: 15px 0 0 10% ;
+  padding: 1% 2% 1% 2% ;
+  vertical-align: middle;
+  font-family: 'Jua', sans-serif;
+}
+.RetryButton {
+  background-color: #c4c4c4;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  font-size: 150%;
+  margin: 3%;
+  padding: 3% 6% 3% 6%;
+  font-family: 'Jua', sans-serif;
+}
+
 @media all and (max-width:1200px){
   .step{
     display: inline-block;
@@ -85,46 +131,61 @@
   }
 }
 @media all and (max-width:960px){
-  .Page-header > h4{
-    font-size: 20px;
-  }
   .step{
     display: inline-block;
     padding: 0 20px 0 20px;
   }
 }
 @media all and (max-width:768px){
-  .Page-header > h1{
-    font-size: 35px;
-  }
   .step{
     display: inline-block;
     padding: 0 20px 0 20px;
   }
-  .photo_box img{
+  .video_box img{
     width: 100px;
     height: 100px;
     margin: 2%;
- }
- .StartButton {
-  font-size: 25px;
-}
-  .GalleryButton {
-    font-size: 20px;
+  }
+  .StartButton {
+    font-size: 90%;
+    }
+    .GalleryButton {
+    font-size: 60%;
+    }
+  .SaveButton{
+    margin: 15px 5% 0 0 ;
+  }
+  .ShareButton{
+    font-size: 25px;
+    margin: 15px 0 0 5% ;
+  }
+  .RetryButton {
+    font-size: 25px;
   }
 }
-@media all and (max-width:320px){
-  .Page-header > h4{
-    font-size: 15px;
+@media all and (max-width:360px){
+  .Page-header h1 {
+    font-size: 120%;
+  }
+  .Page-header h3 {
+    font-size: 80%;
   }
   .step{
     display: inline-block;
     padding: 0 0 0 0;
     font-size: 10px;
   }
-  .photo_box img{
+  .video_box img{
     width: 100px;
     height: 100px;
     margin: 2%;
-}
+  }
+  .SaveButton{
+    font-size: 50%;
+    margin: 15px 0 0 0 ;
+  }
+  .ShareButton{
+    font-size: 50%;
+    margin: 15px 0 0 0 ;
+  }
 }

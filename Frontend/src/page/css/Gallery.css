@@ -2,35 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.Page {
-  background-color: #f2ddcc;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: cal(10px + 2vmin);
-  color: black;
-  text-align: center;
-}
-
-.Star-logo {
-  height: 5vmin;
-  pointer-events: none;
-  vertical-align: middle;
-}
-
-.Page-header {
-  width: 80%;
-  border-radius: 10px;
-  border: solid 1.5px #f6f7fa;
-  margin: 20px;
-  padding-bottom: 20px;
-  background-color: white;
-  margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-}
 .loading_box{
   display: flex;
   justify-content: center;
@@ -39,6 +10,11 @@
 }
 .loading{
   font-size: 100%;
+}
+.gallery_total{
+  display: inline;
+  width: auto;
+  height: auto;
 }
 .gallery_category{
     display: inline-grid;
@@ -57,13 +33,14 @@
 }
 .gallery_no > h6{
     margin: 0;
+    font-size: 90%;
 }
 .RetryButton {
     background-color: #c4c4c4;
     text-align: center;
     color: black;
     border-radius: 15px;
-    font-size: 150%;
+    font-size: 170%;
     margin: 3%;
     padding: 3% 6% 3% 6%;
     font-family: 'Jua', sans-serif;
@@ -71,20 +48,21 @@
 @media all and (max-width:1200px){
 }
 @media all and (max-width:960px){
-  .Page-header > h4{
-    font-size: 20px;
-  }
 }
 @media all and (max-width:768px){
-  .Page-header > h1{
-    font-size: 35px;
+  .gallery_no > h6{
+    margin: 0;
+    font-size: 60%;
   }
   .RetryButton {
-    font-size: 25px;
+    font-size: 100%;
   }
 }
-@media all and (max-width:320px){
-  .Page-header > h4{
-    font-size: 15px;
+@media all and (max-width:360px){
+  .Page-header h1 {
+    font-size: 120%;
+  }
+  .RetryButton {
+    font-size: 80%;
   }
 }
