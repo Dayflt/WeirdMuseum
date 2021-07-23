@@ -4,6 +4,29 @@
 
 <b> 👻 Weird Museum 👻</b> is a web service where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target image by just taking a short video clip.
 
+## 💻 System Architecture
+
+![시스템아키텍쳐-최종](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png)
+
+#### Frontend
+- React
+#### Backend
+- API Server :  Flask
+- Database : PostgreSQL
+- Middleware : gunicorn
+- Web Server : Nginx
+
+#### Deploy
+- Docker
+- NHN Cloud
+- GCP : Cloud SQL (Postgresql), GCS Bucket (S3)
+
+#### Etc
+- Version Control : Git, Github, GitKraken
+- API Test : Postman
+- API Documentation : Swagger
+
+
 
 
 ## ✏️ Getting Started (Prerequisities & Installing & Running)
@@ -97,10 +120,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 ### 👀 Used Model
 [Transfer model](https://github.com/AliaksandrSiarohin/first-order-model)  
         
-### 💻 System Architecture
 
-![시스템아키텍쳐-최종](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png)
-    
 
 ## 💡 Tech Stack
 
