@@ -27,24 +27,32 @@
 .gallery_no{
     text-align: center;
     display: inline-block;
+
 }
 .gallery_video{
     display: inline-block;
+    border: 8px solid whitesmoke;
+    border-style: double;
 }
 .gallery_no > h6{
-    margin: 0;
-    font-size: 90%;
+    margin: 0%;
+    font-size: 100%;
 }
 .RetryButton {
-    background-color: #c4c4c4;
+    background-color:rgb(255, 255, 255);
     text-align: center;
     color: black;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 170%;
     margin: 3%;
-    padding: 3% 6% 3% 6%;
+    padding: 2% 4% 2% 4%;
     font-family: 'Jua', sans-serif;
 }
+
+.button_box{
+  position: relative;
+}
+
 @media all and (max-width:1200px){
 }
 @media all and (max-width:960px){
@@ -59,10 +67,10 @@
   }
 }
 @media all and (max-width:360px){
-  .Page-header h1 {
+  .container h1 {
     font-size: 120%;
   }
   .RetryButton {
-    font-size: 80%;
+    font-size: 150%;
   }
 }

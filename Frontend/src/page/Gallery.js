@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
 import star from './img/star110.png';
 import api from '../api.jsx';
+import './css/Home2.css';
 
 const Gallery = () => {
   const [user1, setUser1] = useState(null);
@@ -44,15 +45,13 @@ const Gallery = () => {
       </div>)
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
-    <div className="Page">
-      <header className="Page-header">
-        <h1>
-         <img src={star} className="Star-logo" alt="logo"></img>
-             Synthesize Images
-        </h1>
+    <div className="masthead">
+      <header className="container">
+        <div class="masthead-heading text-uppercase">Gallery</div>
+        <br></br>
         <div className="gallery_total">
           <div className="gallery_category" >
-            <h5>😉</h5>
+            <h1>😉</h1><hr></hr>
             {user1.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -61,14 +60,14 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="90%"
+                  height="90%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>😟</h5>
+            <h1>😟</h1><hr></hr>
             {user2.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -77,14 +76,14 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="90%"
+                  height="90%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>😨</h5>
+            <h1>😨</h1><hr></hr>
             {user3.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -93,14 +92,14 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="90%"
+                  height="90%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>🤪</h5>
+            <h1>🤪</h1><hr></hr>
             {user4.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -109,8 +108,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="90%"
+                  height="90%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
