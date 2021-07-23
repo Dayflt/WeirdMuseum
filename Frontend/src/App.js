@@ -29,8 +29,8 @@ const App = () => {
         <Setb.Provider value={setb}>
           <Burl.Provider value={burl}>
             <Setburl.Provider value={setburl}>
-              <Route path="/" component={Home} exact={true}/>
-              <Route path="/Home2" component={Home2}/>
+              <Route path="/" component={Home2} exact={true}/>
+              <Route path="/Home2" component={Home}/>
               <Route path="/selection" component={Selection} />
               <Route path="/result/" component={Result} />
               <Route path="/gallery" component={Gallery} />

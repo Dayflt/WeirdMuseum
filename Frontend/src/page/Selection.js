@@ -1,10 +1,10 @@
 import './css/Page.css';
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import one from './img/11.png';
-import two from './img/22.png';
-import thr from './img/33.png';
-import four from './img/44.png';
+import one from './img/1.png';
+import two from './img/2.png';
+import thr from './img/3.png';
+import four from './img/4.png';
 import './css/Home2.css';
 
 const Selection = () => {
