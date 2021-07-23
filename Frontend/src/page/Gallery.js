@@ -51,7 +51,8 @@ const Gallery = () => {
         <br></br>
         <div className="gallery_total">
           <div className="gallery_category" >
-            <h1>😉</h1><hr></hr>
+            <div className="imoge">#Hooray</div>
+            <hr></hr>
             {user1.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -67,7 +68,8 @@ const Gallery = () => {
             ))}
           </div>
           <div className="gallery_category" >
-            <h1>😟</h1><hr></hr>
+          <div className="imoge">#OMG</div>
+            <hr></hr>
             {user2.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -83,7 +85,7 @@ const Gallery = () => {
             ))}
           </div>
           <div className="gallery_category" >
-            <h1>😨</h1><hr></hr>
+          <div className="imoge">#DAMN</div><hr></hr>
             {user3.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -99,7 +101,7 @@ const Gallery = () => {
             ))}
           </div>
           <div className="gallery_category" >
-            <h1>🤪</h1><hr></hr>
+          <div className="imoge">#Holy_Moly</div><hr></hr>
             {user4.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 

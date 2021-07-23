@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+.imoge{
+  font-size:100%;
+  font-style: italic;
+}
 .loading_box{
   display: flex;
   justify-content: center;
@@ -10,6 +13,7 @@
 }
 .loading{
   font-size: 100%;
+  
 }
 .gallery_total{
   display: inline;
