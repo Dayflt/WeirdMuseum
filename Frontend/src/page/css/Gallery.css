@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.container_gallery{
+  margin-top: 0;
+}
+
 .loading_box{
   display: flex;
   justify-content: center;
@@ -18,11 +22,13 @@
 }
 .gallery_category{
     display: inline-grid;
-    width: 20%;
+    width: 15%;
     height: 100%;
+    grid-template-rows: 8% 20% 20% 20% 20%;
 }
 .gallery_category > h5{
     margin:0 0 4% 0;
+    font-size: 250%;
 }
 .gallery_no{
     text-align: center;
@@ -33,7 +39,7 @@
 }
 .gallery_no > h6{
     margin: 0;
-    font-size: 90%;
+    font-size: 120%;
 }
 @media all and (max-width:1200px){
 }
@@ -51,5 +57,10 @@
 @media all and (max-width:360px){
   .container h1 {
     font-size: 120%;
+  }
+}
+@media (min-width: 768px) {
+  .container_gallery{
+    margin-top: -7%;
   }
 }

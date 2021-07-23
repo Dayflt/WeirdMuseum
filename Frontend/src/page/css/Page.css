@@ -59,7 +59,7 @@ body {
   background-color: #000;
 }
 
-.container , .container-lg{
+.container , .container-lg, .container_gallery {
   position: relative;
 }
 

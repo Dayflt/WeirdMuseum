@@ -69,8 +69,8 @@ const Result = () => {//앞에서 넘겨온 id참조, 프록시 5000으로  "pro
             </button>
           </a>              
           <React.Fragment>
-            <button className="ShareButton"  class="btn btn-primary btn-ss" onClick={ openModal }>
-              Share
+            <button className="ShareButton"  class="btn btn-warning btn-ss" onClick={ openModal }>
+              Share to Gallery
             </button>
             <Modal open={ modalOpen } close={ closeModal } model_id={model_id}>
             </Modal>

@@ -3,7 +3,6 @@ import './css/Gallery.css';
 import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
-import star from './img/star110.png';
 import api from '../api.jsx';
 
 const Gallery = () => {
@@ -45,9 +44,9 @@ const Gallery = () => {
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
     <div className="masthead">
-      <header className="container-lg p-3 mb-2">
+      <header className="container_gallery">
         <h1>
-          Synthesize Images
+          Gallery
         </h1>
         <div className="gallery_total">
           <div className="gallery_category" >
@@ -60,8 +59,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="55%"
+                  height="55%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -76,8 +75,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="55%"
+                  height="55%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -92,8 +91,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="55%"
+                  height="55%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -108,8 +107,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="55%"
+                  height="55%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -117,7 +116,7 @@ const Gallery = () => {
         </div>
         <div className="button_box">
           <Link to ="../">  
-            <button className="RetryButton"  class="btn btn-light" > 
+            <button className="RetryButton"  class="btn btn-light btn-retry" > 
               TRY AGAIN
             </button>
           </Link>
