@@ -44,6 +44,13 @@ body {
     font-size: 3.25rem;
     font-weight: 700;
   }
+  .btn-group-lg>.btn, .btn-lg {
+    margin: 10% 2% 0 0 ;
+      padding: 2% 3% 2% 3%;
+      font-size: 3.5rem;
+      line-height: 1.3333333;
+      border-radius: 6px;
+  }
   @media (min-width: 768px) {
     .masthead {
       padding-top: 17rem;
@@ -61,11 +68,12 @@ body {
       line-height: 4.5rem;
       margin-bottom: 4rem;
     }
+    .btn-group-lg>.btn, .btn-lg {
+      margin: 4% 2% 0 0 ;
+        padding: 2% 3% 2% 3%;
+        font-size: 3.5rem;
+        line-height: 1.3333333;
+        border-radius: 6px;
+    }
   }
-  .btn-group-lg>.btn, .btn-lg {
-    margin: 4% 2% 0 0 ;
-      padding: 2% 3% 2% 3%;
-      font-size: 3.5rem;
-      line-height: 1.3333333;
-      border-radius: 6px;
-  }
+  
