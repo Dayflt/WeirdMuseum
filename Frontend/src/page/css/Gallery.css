@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
+
+.hashtag{
+  font-size:100%;
+  font-style: italic;
+}
+
 .container_gallery{
   margin-top: 0;
 }
@@ -14,6 +21,7 @@
 }
 .loading{
   font-size: 100%;
+  
 }
 .gallery_total{
   display: inline;
