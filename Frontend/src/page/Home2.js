@@ -9,16 +9,16 @@ const Home2 =() => {
       <header>
         <div class="masthead">
           <div class="container">
-            <div class="masthead-subheading">Welcome To Weird Museum</div>
+            <div class="masthead-subheading">🦟DayFly🦟</div>
             <div class="masthead-heading text-uppercase">Welcome To Weird Museum</div>
             <div className="button_box">
               <Link to ="./Selection">
-                <button className="StartButton" type="button" class="btn btn-light disabled btn-lg">
+                <button className="StartButton" type="button" class="btn btn-light btn-lg">
                   START!
                 </button>
               </Link>
               <Link to ="./Gallery">
-                <button className="GalleryButton" type="button" class="btn btn-light disabled btn-lg">
+                <button className="GalleryButton" type="button" class="btn btn-light btn-lg">
                   Gallery
                 </button>
               </Link>
