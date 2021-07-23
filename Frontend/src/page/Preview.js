@@ -6,7 +6,6 @@ import two from "./img/2.png";
 import thr from "./img/3.png";
 import four from "./img/4.png";
 import plus from "./img/plus.png";
-import star from "./img/star110.png";
 import api from '../api.jsx';
 import { Bdata, Burl } from "../App";
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -61,7 +60,7 @@ const Preview = ({ match }) => {
 
   return (
     <div class="masthead">
-      <div class="container-lg p-3 mb-2 ">
+      <div class="container-lg p-3 mb-2">
         <h1>
           Your Choice! Keep Going?
         </h1>
