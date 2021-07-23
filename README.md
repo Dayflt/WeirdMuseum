@@ -4,9 +4,32 @@
 
 <b> 👻 Weird Museum 👻</b> is a web service where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target image by just taking a short video clip.
 
+## 💻 System Architecture
+
+![시스템아키텍쳐-최종](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png)
+
+#### Frontend
+- React
+#### Backend
+- API Server :  Flask
+- Database : PostgreSQL
+- Middleware : gunicorn
+- Web Server : Nginx
+
+#### Deploy
+- Docker
+- NHN Cloud
+- GCP : Cloud SQL (Postgresql), GCS Bucket (S3)
+
+#### Etc
+- Version Control : Git, Github, GitKraken
+- API Test : Postman
+- API Documentation : Swagger
 
 
-## ✏️ Getting Started (Prerequisities & Installing) ( Follow 4 steps)
+
+
+## ✏️ Getting Started (Prerequisities & Installing & Running)
 
 ### 1. Cloning
 ```
@@ -35,38 +58,69 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
    ```
   $ docker-compose exec postgres_db psql --username=postgres --dbname=video
   (psql)
-  video=# \l                            #
-  video=# \dt                           #video db와 연결된 모든 테이블 보기
-  video=# select * from video_info;     #video_info에 저장된 값 모두 보기
+  video=# \l                            #list all databases
+  video=# \dt                           #list all tables in the current database
+  video=# select * from video_info;     #list all data of video_info table
    ```
-  
-  #### Production environment 
+  - Running 
   ```
+  http://localhost:5000         # Flask application
+  http://localhost:5000/swagger # Swagger
+  http://localhost:3000           # React application
+  ```
+  
+  #### Production environment
+  
+  1. Check whether 80 and 443 ports are open 
+  
+  2. Modify configuration
+  - Change *domains* and *email addresses* in init-letsencrypt.sh
+  - Replace all occurrences of *weirdmuseum.ml* with your domain ex) server_name museum.ml -> server_name 'your domain'
+  
+  3. Run the init script to obtain SSL Certificates and Credentials (./certbot directory will be created)
+  ```
+  $ chmod +x ./init-letsencrypt.sh  # Make it executable
+  $ ./init-letsencrypt.sh            # Run the init script
+  ```
+  
+  4. Check the status of your service
+  ```
+  $ docker ps                       # See running containers
+  ```
+ 
+ 5. Once you obtain SSL Certificates and Credentials, use the commands below to run, stop or rerun the containers.
+ ```
   $ docker-compose -f docker-compose.prod.yml up --build
   $ docker-compose down #stop running containers
   $ docker- compose -f docker-compose.prod.yml up # rerun containers
   or
   $ docker-compose down # stop running containers and delete its volume
   ```
+   
+  - Running (based on our domain)
+  ```
+  https://museum.ml             # Nginx 
+  ```
   
   #### etc
   ```
   $ docker ps #See running containers
   $ docker ps -a #See all containers
+  $ docker-compose logs [service_name]  #Check the service logs
   $ docker images # See all built images
+  $ docker-compose rm -f $(docker ps -a -q) #remove all containers
   $ docker volume ls # See volumes
   $ docker images prune # remove untagged(none) images
   $ docker network prune # remove all unused network
   $ docker volume prune  # remove all unused local volume
   ```
-  
+### 📗 SWAGGER
+![20210717_195035](https://user-images.githubusercontent.com/79822913/126034610-20bff471-7e80-48c8-88f8-c30e28dfd37d.png)
+
 ### 👀 Used Model
 [Transfer model](https://github.com/AliaksandrSiarohin/first-order-model)  
         
-### 💻 System Architecture
 
-![시스템아키텍쳐-최종](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png)
-    
 
 ## 💡 Tech Stack
 
@@ -76,31 +130,31 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 
 ## 🔧 Directory Structure
 ```bash
-├── README.md                                            - 리드미 파일
+├── README.md                                          - 리드미 파일
 │
-├── Backend/                                              - 백엔드 플라스크 디렉토리
-│   ├── Dockerfile                                        - 백앤드 도커파일
-│   ├── run.py                
-│   ├── views.py               - SQLAlchamy의 기능을 정의한 파일
+├── Backend/                                           - 백엔드 플라스크 디렉토리
+│   ├── Dockerfile                                     - 백앤드 도커파일
+│   ├── run.py                                         - Flask 실행 위한 파일
+│   ├── views.py               -                       - SQLAlchamy의 기능을 정의한 파일
 │   ├── dayfly-318913-a4b443321e00.json         
 │   ├── requirements.txt                               - 모듈들을 정리한 파일
 │   └── web/
 │        ├── AI/                                       - AI모델 알고리즘
-│        ├── data/result/                              - 백엔드 동영상 임시 저장 디렉토리
+│        ├── data/result/                              - 영상 임시 저장 디렉토리
 │        ├── __init__.py
-│        ├── config.py
+│        ├── config.py                                 - postgreSQL와 연결 설정
 │        ├── gcp.py
-│        ├── models.py
+│        ├── models.py                                 - postgreSQL 모델 설정
 │        ├── prdedictmix.py
-│        ├── routes.py
-│        ├── views.py
+│        ├── routes.py                                 - api 함수 정의
+│        ├── views.py                                  - database ORM 정의 파일
 │        └── static/
-│              └── swagger.json 
+│              └── swagger.json                        - swagger 정의 파일
 │
 ├── Frontend/
 │   ├── Dockerfile                                    - 프론트앤드 도커파일
-│   ├── public/    
-│   ├── package.json & package.lock.json    
+│   ├── public/                                       - 프론트앤드 디폴트 디렉토리
+│   ├── package.json & package.lock.json           
 │   └── src/ 
 │        ├── App.js & App.test.js & setupTest.js
 │        ├── App.css
@@ -108,25 +162,26 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 │        └── page/
 │   	        ├── css /                              - 컴포넌트들의 css
 │   	        ├── imgs /                             - 컴포넌트들의 image
-│   	        ├── Gallery.js          
-│   	        ├── Home.js         
-│   	        ├── Preview.js         
-│   	        ├── Record.js         
-│   	        ├── Result.js        
-│   	        ├── Selection.js  
-│   	        └── components/  
+│   	        ├── Gallery.js                         - 갤러리 페이지
+│   	        ├── Home.js                            - 메인 페이지
+│   	        ├── Preview.js                         - Preview 페이지
+│   	        ├── Record.js                          - 웹캠 페이지
+│   	        ├── Result.js                          - 결과물 페이지
+│   	        ├── Selection.js                       - 사진 선택 페이지
+│   	        └── components/                        
 │                   └── Modal.js
 ├── Nginx/
-│   ├── Dockerfile                                 - Nginx 도커파일
-│   └── nginx.conf
+│   ├── Dockerfile                                    - nginx 도커파일
+│   └── nginx.conf                                    - nginx 설정파일
 │
-├── Settings/                                      -  환경변수 설정 파일
-│   ├── dev/        
-│   │    └── .env.dev
+├── Settings/                                         -  환경변수 설정 파일
+│   ├── dev/                                              
+│   │    └── .env.dev                                 -  개발환경변수 설정 파일
 │   └── prod/
-│        └── .env.prod
-├── docker-compose.yml                                - 개발용
-├── docker-compose.prod.yml                           - 배포용 
+│        └── .env.prod                                -  배포환경변수 설정 파일
+├── docker-compose.yml                                - 개발용 docker-compose파일
+├── docker-compose.prod.yml                           - 배포용 docker-compose파일
+├── init-letsencrypt.sh                               - SSL인증서 발급받기 위한 과정을 자동화시킨 스크립트파일 
 └── .gitignore		
 ```  
 
