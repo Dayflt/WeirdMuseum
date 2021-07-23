@@ -3,7 +3,6 @@ import './css/Gallery.css';
 import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
-import star from './img/star110.png';
 import api from '../api.jsx';
 import './css/Home2.css';
 
@@ -46,9 +45,10 @@ const Gallery = () => {
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
     <div className="masthead">
-      <header className="container">
-        <div class="masthead-heading text-uppercase">Gallery</div>
-        <br></br>
+      <header className="container_gallery">
+        <h1>
+          Gallery
+        </h1>
         <div className="gallery_total">
           <div className="gallery_category" >
             <div className="hashtag">#Hooray</div>
@@ -61,8 +61,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="90%"
-                  height="90%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -78,8 +78,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="90%"
-                  height="90%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -94,8 +94,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="90%"
-                  height="90%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -110,8 +110,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="90%"
-                  height="90%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -119,7 +119,7 @@ const Gallery = () => {
         </div>
         <div className="button_box">
           <Link to ="../">  
-            <button className="RetryButton"> 
+            <button className="RetryButton"  class="btn btn-light btn-retry" > 
               TRY AGAIN
             </button>
           </Link>
