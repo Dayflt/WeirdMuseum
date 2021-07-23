@@ -48,8 +48,8 @@ const Result = () => {//앞에서 넘겨온 id참조, 프록시 5000으로  "pro
   //var resultVideo ='https://storage.googleapis.com/dayfly-bucket/testvidmixed.mp4'
 
   return (
-    <div className="masthead">
-      <header className="container">
+    <div className="masthead_result">
+      <header className="container_result">
         <h1>Check video!!!</h1>
         <div className="result_box">
           <ReactPlayer 

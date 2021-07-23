@@ -4,7 +4,9 @@ import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
+import ClipLoader from "react-spinners/ClipLoader";
 import './css/Home2.css';
+import { css } from "@emotion/react";
 
 const Gallery = () => {
   const [user1, setUser1] = useState(null);
@@ -12,6 +14,12 @@ const Gallery = () => {
   const [user3, setUser3] = useState(null);
   const [user4, setUser4] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: #ffffff;
+`;
   
   useEffect(() => {
     const fetchUsers = async () => {
@@ -40,7 +48,7 @@ const Gallery = () => {
   if (loading) 
     return (
       <div className="loading_box">
-        <div className="loading">갤러리 로딩중..</div>
+        <div className="loading">...</div>
       </div>)
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (

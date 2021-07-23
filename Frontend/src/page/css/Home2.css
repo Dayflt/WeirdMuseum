@@ -41,7 +41,7 @@ body {
   }
   
   @media (min-width: 768px) {
-    .masthead {
+    .masthead_home {
       padding-top: 17rem;
       padding-bottom: 20rem;
     }

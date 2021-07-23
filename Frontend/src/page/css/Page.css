@@ -24,6 +24,18 @@ body {
   background-size: cover;
 }
 
+.masthead_result{
+  text-align: center;
+  color: #fff;
+  background-image: url("../img/home_bg.jpg");
+  position: relative;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+}
+
 .btn-bn{
   margin: 4% 2% 0 2% ;
 	padding: 1% 2% 1% 2%;
@@ -42,8 +54,12 @@ body {
 
 @media (min-width: 768px) {
   .masthead {
-    padding-top: 11rem;
     padding-bottom: 20rem;
+  }
+  .masthead_result{
+    padding-top: 3rem;
+    padding-bottom: 20rem;
+
   }
   .barbox{
     margin : -20% 0 2% 0;
@@ -62,7 +78,7 @@ body {
   background-color: #000;
 }
 
-.container , .container-lg, .container_gallery {
+.container , .container-lg, .container_gallery, .container_result{
   position: relative;
 }
 
