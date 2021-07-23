@@ -33,9 +33,12 @@
 .gallery_no{
     text-align: center;
     display: inline-block;
+
 }
 .gallery_video{
     display: inline-block;
+    border: 8px solid whitesmoke;
+    border-style: double;
 }
 .gallery_no > h6{
     margin: 0;
