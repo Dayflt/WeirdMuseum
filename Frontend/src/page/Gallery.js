@@ -60,8 +60,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="55%"
-                  height="55%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -76,8 +76,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="55%"
-                  height="55%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -92,8 +92,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="55%"
-                  height="55%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -108,8 +108,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="55%"
-                  height="55%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
