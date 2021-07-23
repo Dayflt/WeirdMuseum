@@ -2,13 +2,16 @@
 import './css/Home.css';
 import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // 추가
 import star from './img/star110.png';
 import api from '../api.jsx';
 import Modal from './components/Modal';
 //import fileDownload from 'js-file-download';
 
-const Result =() => {//앞에서 넘겨온 id참조, 프록시 5000으로  "proxy": "http://localhost:5000"
+
+const Result = () => {//앞에서 넘겨온 id참조, 프록시 5000으로  "proxy": "http://localhost:5000"
+  //const model_id = match.params.model;
+
   const [modalOpen, setModalOpen ] = useState(false);
   const [resultVideo, setResultVideo ] = useState("");
   
@@ -45,6 +48,7 @@ const Result =() => {//앞에서 넘겨온 id참조, 프록시 5000으로  "prox
   //var resultVideo ='https://storage.googleapis.com/dayfly-bucket/testvidmixed.mp4'
 
   return (
+    
     <div className="Page">
       <header className="Page-header">
         <h1>

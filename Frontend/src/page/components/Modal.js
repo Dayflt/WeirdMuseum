@@ -65,23 +65,23 @@ const Modal = ( props) => {
     // 모달이 열릴때 openModal 클래스가 생성된다.
     <div className={ open ? 'openModal modal' : 'modal' }>
       { open ? (  
-        <section>
-          <header>
-            닉네임과 이모티콘을 선택해주세요!
+        <section class="card border-primary mb-3">
+          <header class="card-header">
+            Choose your nickname and emoji!
             <button className="close" onClick={close}> &times; </button>
           </header>
-          <main>
-            <input required type="text" name="nickname" placeholder="닉네임" onChange={(e) => setNickname(e.target.value)}/>
+          <main class="card-text">
+            <input required type="text" name="nickname" placeholder="Nickname" onChange={(e) => setNickname(e.target.value)}/>
             <select className="emoticon" name="emoticon" onChange={(e) => setEmoticon(e.target.value)}>
-              <option value="1">🤣</option>
-              <option selected value="2">😚</option>
-              <option value="3">🙃</option>
-              <option value="4">😱</option>
+              <option value="1">😉</option>
+              <option selected value="2">😟</option>
+              <option value="3">😨</option>
+              <option value="4">🤪</option>
             </select>
             <ReactNotification />
           </main>
           <footer>
-            <button className="close" onClick={clickSave}> Share it! </button>
+            <button className="close" onClick={clickSave} class="btn btn-dark"> Share it! </button>
           </footer>
         </section>
       ) : null }
