@@ -71,7 +71,7 @@ const Modal = ( props) => {
             <button className="close" onClick={close}> &times; </button>
           </header>
           <main class="card-text">
-            <input required type="text" maxLength="5" name="nickname" placeholder="Nickname" onChange={(e) => setNickname(e.target.value)}/>
+            <input required type="text" maxLength="8" name="nickname" placeholder="Nickname" onChange={(e) => setNickname(e.target.value)}/>
             <select className="emoticon" name="emoticon" onChange={(e) => setEmoticon(e.target.value)}>
               <option value="1">😉</option>
               <option selected value="2">😟</option>

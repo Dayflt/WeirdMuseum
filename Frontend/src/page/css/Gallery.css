@@ -35,16 +35,6 @@
     margin: 0;
     font-size: 90%;
 }
-.RetryButton {
-    background-color: #c4c4c4;
-    text-align: center;
-    color: black;
-    border-radius: 15px;
-    font-size: 170%;
-    margin: 3%;
-    padding: 3% 6% 3% 6%;
-    font-family: 'Jua', sans-serif;
-}
 @media all and (max-width:1200px){
 }
 @media all and (max-width:960px){
@@ -59,10 +49,7 @@
   }
 }
 @media all and (max-width:360px){
-  .Page-header h1 {
+  .container h1 {
     font-size: 120%;
-  }
-  .RetryButton {
-    font-size: 80%;
   }
 }

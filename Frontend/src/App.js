@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
 import "bootswatch/dist/sketchy/bootstrap.min.css";
-import Home from './page/Home';
 import Home2 from './page/Home2';
 import Record from './page/Record';
 import Result from './page/Result';
@@ -30,7 +29,6 @@ const App = () => {
           <Burl.Provider value={burl}>
             <Setburl.Provider value={setburl}>
               <Route path="/" component={Home2} exact={true}/>
-              <Route path="/Home2" component={Home}/>
               <Route path="/selection" component={Selection} />
               <Route path="/result/" component={Result} />
               <Route path="/gallery" component={Gallery} />

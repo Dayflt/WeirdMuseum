@@ -44,11 +44,10 @@ const Gallery = () => {
       </div>)
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
-    <div className="Page">
-      <header className="Page-header">
+    <div className="masthead">
+      <header className="container-lg p-3 mb-2">
         <h1>
-         <img src={star} className="Star-logo" alt="logo"></img>
-             Synthesize Images
+          Synthesize Images
         </h1>
         <div className="gallery_total">
           <div className="gallery_category" >
@@ -118,7 +117,7 @@ const Gallery = () => {
         </div>
         <div className="button_box">
           <Link to ="../">  
-            <button className="RetryButton"> 
+            <button className="RetryButton"  class="btn btn-light" > 
               TRY AGAIN
             </button>
           </Link>
