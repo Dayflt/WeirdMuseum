@@ -49,6 +49,14 @@ const Record = ({ match }) => {
   return (
     <div class="masthead height: 100%">
       <div class="container-lg p-3 mb-2 vh-80">
+        <div className="barbox">
+          <ul id="progressbar">
+            <li id="selection" class="active"><strong>SELECTION</strong></li>
+            <li id="webcam" class="active"><strong>WEBCAM</strong></li>
+            <li id="preview"><strong>PREVIEW</strong></li>
+            <li id="result"><strong>RESULT</strong></li>
+          </ul>
+        </div>
         <h1>Record Your Face!</h1>
         <div class="container d-block">
           <div style={{ display: "block" }}>
