@@ -5,7 +5,6 @@ import one from './img/1.png';
 import two from './img/2.png';
 import thr from './img/3.png';
 import four from './img/4.png';
-import './css/Home2.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Selection = () => {
@@ -15,13 +14,7 @@ const Selection = () => {
 
   return (
     <div class="masthead">
-      <div class="container-lg p-3 mb-2">
-        <h1>
-          Choose your face!
-        </h1>
-        <h3>
-          바뀌고 싶은 얼굴을 선택하세요!
-        </h3>
+      <div class="container p-3 mb-2">
         <div className="barbox">
           <ul id="progressbar">
             <li id="selection" class="active"><strong>SELECTION</strong></li>
@@ -30,15 +23,18 @@ const Selection = () => {
             <li id="result"><strong>RESULT</strong></li>
           </ul>
         </div>
+        <h1>
+          Choose your face!
+        </h1>
         <div class="container mt-5">
-          <div class="hv-60">
+          <div>
             <img  src={pic[num]} alt="select img"/>
           </div>
           <div class="m-3">
-            <button type="button" class="btn btn-primary m-3" onClick={() => { m_num(0) }}> 1</button>
-            <button type="button" class="btn btn-primary" onClick={() => { m_num(1) }}> 2</button>
-            <button type="button" class="btn btn-primary m-3" onClick={() => { m_num(2) }}> 3</button>
-            <button type="button" class="btn btn-primary" onClick={() => { m_num(3) }}> 4</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(0) }}> 1</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(1) }}> 2</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(2) }}> 3</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(3) }}> 4</button>
           </div>
         </div>
         <div>

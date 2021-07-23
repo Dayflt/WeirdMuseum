@@ -42,9 +42,17 @@ body {
 	border-radius: 4px;
 }
 
+.btn-number{
+  margin: 2% 2% 2% 2% ;
+	padding: 0.3% 1%;
+	font-size: 1.6rem;
+	line-height: 1.3333333;
+	border-radius: 9px;
+}
+
 @media (min-width: 768px) {
   .masthead {
-    padding-top: 13rem;
+    padding-top: 11rem;
     padding-bottom: 20rem;
   }
   .masthead .masthead-subheading {
