@@ -102,7 +102,7 @@ const Record = ({ match }) => {
         <Link to="../Selection">
           <button
             type="button"
-            class="btn btn-primary m-3"
+            class="btn btn-primary btn-bn"
             disabled={record_state}
           >
             <i class="bi-caret-left"/>
@@ -111,7 +111,7 @@ const Record = ({ match }) => {
         </Link>
         <button
           type="button"
-          class="btn btn-primary m-3"
+          class="btn btn-primary btn-bn"
           disabled={!re_state}
           onClick={set}
         >

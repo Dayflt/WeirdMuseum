@@ -43,13 +43,13 @@ const Selection = () => {
         </div>
         <div>
           <Link to="./">
-            <button type="button" class="btn btn-primary m-3">
+            <button type="button" class="btn btn-primary btn-bn">
             <i class="bi-caret-left"/>
               BACK
             </button>
           </Link>
           <Link to={`./Record/${num}`}>
-            <button type="button" class="btn btn-primary m-3">
+            <button type="button" class="btn btn-primary btn-bn">
               NEXT
               <i class="bi-caret-right"/>
             </button>

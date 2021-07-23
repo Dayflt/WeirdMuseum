@@ -14,10 +14,12 @@ body {
     padding-bottom: 28rem;
     text-align: center;
     color: #fff;
-    background-image: url("../img/home_bg.jpg");
+    background-image: url("../img/home_bg.jpg");  
+    position: relative;
+    height: 100vh;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center center;
+    background-position: center top;
     background-size: cover;
   }
   .masthead .masthead-subheading {
