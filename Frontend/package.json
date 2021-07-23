@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "bootstrap-icons": "^1.5.0",
     "bootswatch": "^5.0.2",
     "js-file-download": "^0.4.12",
     "react": "^17.0.2",
