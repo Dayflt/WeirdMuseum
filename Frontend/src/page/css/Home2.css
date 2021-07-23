@@ -16,7 +16,7 @@ body {
     color: #fff;
     background-image: url("../img/home_bg.jpg");  
     position: relative;
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center top;
