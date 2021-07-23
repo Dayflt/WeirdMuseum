@@ -1,5 +1,4 @@
 // eslint-disable-next-line
-import './css/Home.css';
 import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link, useLocation } from "react-router-dom"; // 추가
