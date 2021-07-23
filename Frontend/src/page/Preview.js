@@ -6,12 +6,10 @@ import two from "./img/2.png";
 import thr from "./img/3.png";
 import four from "./img/4.png";
 import plus from "./img/plus.png";
-import star from "./img/star110.png";
 import api from '../api.jsx';
 import { Bdata, Burl } from "../App";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { css } from "@emotion/react";
-import './css/Home2.css';
 
 const Preview = ({ match }) => {
   const { num } = match.params;
@@ -61,31 +59,25 @@ const Preview = ({ match }) => {
 
   return (
     <div class="masthead">
-      <div class="container-lg p-3 mb-2 ">
-        <h1>
-          Your Choice! Keep Going?
-        </h1>
+      <div class="container-lg p-3 mb-2">
+        <h1>Your Choice! Keep Going?</h1>
         <div className="ImageBox" style={{ margin: "3%" }}>
           {!loadings && !result ? (
             <div>
-              <div class="container row justify-content-center" >
+              <div class="container row justify-content-center">
                 <div class="col-sm-5 row">
-                  <img
-                    class="img-fluid"
-                    src={pic[num]}
-                    alt="select img"
-                  ></img>
+                  <img class="img-fluid" src={pic[num]} alt="select img"></img>
                 </div>
                 <div class="col-sm-1 h-20 center-block row">
                   <img src={plus} alt="plus img"></img>
                 </div>
                 <div class="col-sm-5 row">
-                  <video  class="img-fluid" src={burl} autoPlay muted loop />
+                  <video class="img-fluid" src={burl} autoPlay muted loop />
                 </div>
               </div>
             </div>
           ) : result ? (
-            console.log('../Result/' + model)
+            console.log("../Result/" + model)
           ) : (
             <div>
               <h3>Loading ...</h3>
@@ -100,19 +92,15 @@ const Preview = ({ match }) => {
         </div>
         <div>
           <Link to={`../Record/${num}`}>
-          <button type="button" class="btn btn-primary m-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-                <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
-              </svg>
+            <button type="button" class="btn btn-primary btn-bn">
+              <i class="bi-caret-left" />
               BACK
             </button>
           </Link>
-          <button type="button" class="btn btn-primary m-3" onClick={send}>
-              NEXT
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
-              </svg>
-            </button>
+          <button type="button" class="btn btn-primary btn-bn" onClick={send}>
+          NEXT
+          <i class="bi-caret-right"/>
+        </button>
         </div>
       </div>
     </div>
