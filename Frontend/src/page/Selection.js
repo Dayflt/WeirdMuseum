@@ -5,7 +5,7 @@ import one from './img/1.png';
 import two from './img/2.png';
 import thr from './img/3.png';
 import four from './img/4.png';
-import './css/Home2.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Selection = () => {
 
@@ -14,13 +14,7 @@ const Selection = () => {
 
   return (
     <div class="masthead">
-      <div class="container-lg p-3 mb-2">
-        <h1>
-          Choose your face!
-        </h1>
-        <h3>
-          바뀌고 싶은 얼굴을 선택하세요!
-        </h3>
+      <div class="container p-3 mb-2">
         <div className="barbox">
           <ul id="progressbar">
             <li id="selection" class="active"><strong>SELECTION</strong></li>
@@ -29,32 +23,31 @@ const Selection = () => {
             <li id="result"><strong>RESULT</strong></li>
           </ul>
         </div>
+        <h1>
+          Choose your face!
+        </h1>
         <div class="container mt-5">
-          <div class="hv-60">
+          <div>
             <img  src={pic[num]} alt="select img"/>
           </div>
           <div class="m-3">
-            <button type="button" class="btn btn-primary m-3" onClick={() => { m_num(0) }}> 1</button>
-            <button type="button" class="btn btn-primary" onClick={() => { m_num(1) }}> 2</button>
-            <button type="button" class="btn btn-primary m-3" onClick={() => { m_num(2) }}> 3</button>
-            <button type="button" class="btn btn-primary" onClick={() => { m_num(3) }}> 4</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(0) }}> 1</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(1) }}> 2</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(2) }}> 3</button>
+            <button type="button" class="btn-number" onClick={() => { m_num(3) }}> 4</button>
           </div>
         </div>
         <div>
           <Link to="./">
-            <button type="button" class="btn btn-primary m-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-                <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
-              </svg>
+            <button type="button" class="btn btn-primary btn-bn">
+            <i class="bi-caret-left"/>
               BACK
             </button>
           </Link>
           <Link to={`./Record/${num}`}>
-            <button type="button" class="btn btn-primary m-3">
+            <button type="button" class="btn btn-primary btn-bn">
               NEXT
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
-              </svg>
+              <i class="bi-caret-right"/>
             </button>
           </Link>
         </div>
