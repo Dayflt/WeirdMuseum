@@ -15,7 +15,7 @@ const Home2 =() => {
             <div className="button_box">
               <Link to ="./Selection">
                 <button className="StartButton" type="button" class="btn btn-light btn-lg">
-                  START!!
+                  START!
                 </button>
               </Link>
               <Link to ="./Gallery">
