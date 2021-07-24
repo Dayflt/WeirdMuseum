@@ -129,6 +129,22 @@ body {
   margin-left : 0;
 }
 
+.timer{
+  object-fit: contain ;
+  margin-bottom: 2%;
+  
+}
+
+video { 
+  width:80% !important; 
+  max-width:80%;
+  height:auto;
+}
+
+.row_b{
+  display: block;
+}
+
 /*progressbar 설정*/
 #progressbar #selection:before {
   font-family: FontAwesome;

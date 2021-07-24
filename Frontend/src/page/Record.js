@@ -4,11 +4,12 @@ import { Link, useHistory } from "react-router-dom";
 import { useRecordWebcam } from "react-record-webcam";
 import { Setb, Setburl } from "../App";
 import "./css/Home2.css";
+import t from './img/timer.png';
 
 const Record = ({ match }) => {
   const history = useHistory();
   const num = match.params.num;
-  const OPTIONS = { recordingLength: 5, fileType: "mp4" }; // 녹화 제한 시간, 확장자
+  const OPTIONS = { recordingLength: 10, fileType: "mp4" }; // 녹화 제한 시간, 확장자
   const recordWebcam = useRecordWebcam(OPTIONS);
 
   const setburl = useContext(Setburl);
@@ -48,7 +49,7 @@ const Record = ({ match }) => {
 
   return (
     <div class="masthead height: 100%">
-      <div class="container-lg p-3 mb-2 vh-80">
+      <div class="container-lg p-3 mb-2">
         <div className="barbox">
           <ul id="progressbar">
             <li id="selection" class="active"><strong>SELECTION</strong></li>
@@ -58,16 +59,15 @@ const Record = ({ match }) => {
           </ul>
         </div>
         <h1 class="title">Record Your Face!</h1>
+        <p class="mt-3 fs-4"> Make your face close to the camera and show whatever facial expression you want </p>
         <div class="container d-block">
           <div style={{ display: "block" }}>
             {re_state ? (
-              <div class="container p-3 mb-2 vh-80">
+              <div class="container p-3 mb-2">
                 <div class="pt-4">
                   {" "}
                   <video
                     ref={recordWebcam.previewRef}
-                    height="480px"
-                    width="680px"
                     autoPlay
                     muted
                     loop
@@ -75,11 +75,11 @@ const Record = ({ match }) => {
                 </div>
               </div>
             ) : (
-              <div class="mt-4">
-                <video
+              <div class="container-lg row row_b mt-5">
+                <img src={t} class="timer " alt="timer" height="60px"/>
+                <video 
+                  class = "center-block"
                   ref={recordWebcam.webcamRef}
-                  height="480px"
-                  width="680px"
                   autoPlay
                   muted
                 />
