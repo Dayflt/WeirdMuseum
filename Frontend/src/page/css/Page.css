@@ -97,6 +97,18 @@ body {
   margin-top: 3rem;
   margin-bottom: -1.5rem;
 }
+/* preview page */
+/* plus이미지 */
+.img_plus{
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+/* .row속성 */
+.row{
+  margin-right : 0;
+  margin-left : 0;
+}
 
 /*progressbar 설정*/
 #progressbar #selection:before {

@@ -59,7 +59,7 @@ const Preview = ({ match }) => {
 
   return (
     <div class="masthead">
-      <div class="container-lg p-3 mb-2">
+      <div class="container-lg p-3 mb-2 ">
         <div className="barbox">
           <ul id="progressbar">
             <li id="selection" class="active"><strong>SELECTION</strong></li>
@@ -68,16 +68,16 @@ const Preview = ({ match }) => {
             <li id="result"><strong>RESULT</strong></li>
           </ul>
         </div>
-        <h1>Your Choice! Keep Going?</h1>
+        <h1 class="title">Your Choice! Keep Going?</h1>
         <div className="ImageBox" style={{ margin: "3%" }}>
           {!loadings && !result ? (
             <div>
-              <div class="container row justify-content-center">
+              <div class="container_preview row justify-content-center">
                 <div class="col-sm-5 row">
                   <img class="img-fluid" src={pic[num]} alt="select img"></img>
                 </div>
                 <div class="col-sm-1 h-20 center-block row">
-                  <img src={plus} alt="plus img"></img>
+                  <img className="img_plus" src={plus} alt="plus img"></img>
                 </div>
                 <div class="col-sm-5 row">
                   <video class="img-fluid" src={burl} autoPlay muted loop />
