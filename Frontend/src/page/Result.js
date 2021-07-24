@@ -49,7 +49,7 @@ const Result = () => {//앞에서 넘겨온 id참조, 프록시 5000으로  "pro
 
   return (
     <div className="masthead_result">
-      <header className="container_result">
+      <header className="container">
         <h1>Check video!!!</h1>
         <div className="result_box">
           <ReactPlayer 

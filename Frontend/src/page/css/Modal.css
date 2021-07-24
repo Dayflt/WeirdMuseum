@@ -73,7 +73,7 @@ input{
 }
 .emoticon{
     display: inline-block;
-    font-size: 50px;
+    font-size: 40px;
 }
 @media all and (max-width:1200px){
 }
@@ -91,7 +91,7 @@ input{
   }
 
   .emoticon{
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media all and (max-width:360px){
@@ -100,7 +100,7 @@ input{
     font-size: 30px;
   }
   .emoticon{
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 @keyframes modal-show {
