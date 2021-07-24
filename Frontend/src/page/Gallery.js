@@ -4,9 +4,7 @@ import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
-import ClipLoader from "react-spinners/ClipLoader";
 import './css/Home2.css';
-import { css } from "@emotion/react";
 
 const Gallery = () => {
   const [user1, setUser1] = useState(null);
@@ -15,12 +13,6 @@ const Gallery = () => {
   const [user4, setUser4] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: #ffffff;
-`;
-  
   useEffect(() => {
     const fetchUsers = async () => {
       try{
@@ -53,9 +45,9 @@ const Gallery = () => {
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
     <div className="masthead">
-      <header className="container_gallery">
+      <header className="container-lg p-3 mb-2 vh-80">
         <h1>
-          Gallery
+          Weird Gallery
         </h1>
         <div className="gallery_total">
           <div className="gallery_category" >

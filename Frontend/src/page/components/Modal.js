@@ -67,16 +67,16 @@ const Modal = ( props) => {
       { open ? (  
         <section class="card border-primary mb-3">
           <header class="card-header">
-            Choose your nickname and emoji!
+            Choose your nickname and hashtag!
             <button className="close" onClick={close}> &times; </button>
           </header>
           <main class="card-text">
             <input required type="text" maxLength="8" name="nickname" placeholder="Nickname" onChange={(e) => setNickname(e.target.value)}/>
             <select className="emoticon" name="emoticon" onChange={(e) => setEmoticon(e.target.value)}>
-              <option value="1">😉</option>
-              <option selected value="2">😟</option>
-              <option value="3">😨</option>
-              <option value="4">🤪</option>
+              <option value="1">#Hooray</option>
+              <option selected value="2">#OMG</option>
+              <option value="3">#DAMN</option>
+              <option value="4">#Holy_Moly</option>
             </select>
             <ReactNotification />
           </main>
