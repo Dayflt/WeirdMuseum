@@ -1,46 +1,81 @@
 body {
-    margin: 0;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .masthead_home {
-    padding-top: 15rem;
-    padding-bottom: 28rem;
-    text-align: center;
-    color: #fff;
-    background-image: url("../img/bg.jpg");  
-    position: relative;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center top;
-    background-size: cover;
-  }
-  /*.masthead_home .masthead-subheading {
-    position: relative;
-    top: 100px;
-    font-size: 1.5rem;
-    font-style: italic;
-    line-height: 1.5rem;
-    margin-bottom: 25px;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }*/
-  .masthead_home .masthead-subheading {
-    position:relative;
-    top: 20px;
-    font-size: 2.25rem;
-    font-style: italic;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
-  }
+  margin: 0;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
+.masthead_home {
+  padding-top: 10rem;
+  padding-bottom: 30rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../img/bg.jpg");  
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+}
+.masthead_home .masthead-createheading {
+  position: relative;
+  top: -60px;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1rem;
+  margin-bottom: 2rem;
+}
+
+.masthead_home .masthead-subheading {
+  position:relative;
+  top: -70px;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 2.25rem;
+  /*margin-bottom: 2rem;*/
+}
+
+
+.masthead_home .masthead-heading {
+  position: relative;
+  top: -40px;
+  font-size: 3.0rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.btn-lg{
+  position: relative;
+  top: -50px;
+  background-color:#212529;
+  margin: 4% 2% 0 0 ;
+  color:ghostwhite;
+  padding: 2% 3% 2% 3%;
+  font-size: 3.0rem;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.btn-lg:hover{
+  position: relative;
+  top: -50px;
+  box-shadow:200px 200px 200px 200px rgba(0,0,0,0.5) inset;
+  background-color:#212529;
+  border-color: #212529;
+  color:ghostwhite;
+}
+
+@media (min-width: 768px) {
+  .masthead_home {
+    padding-top: 12rem;
+    padding-bottom: 35rem;/*바꿈*/
+  }
   .masthead_home .masthead-createheading {
     position: relative;
     top: 50px;
@@ -49,83 +84,40 @@ body {
     line-height: 2.25rem;
     margin-bottom: 2rem;
   }
-
-  .masthead_home .masthead-heading {
-    position: relative;
-    top: 50px;
-    font-size: 3.25rem;
-    font-weight: 700;
-    line-height: 3.25rem;
+  .masthead_home .masthead-subheading {
+    position:relative;
+    top: 20px;
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
     margin-bottom: 2rem;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
+  .masthead_home .masthead-heading {
+    position:relative;
+    top: 50px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+  
   .btn-lg{
+    position:relative;
+    top: -10px;
     background-color:#212529;
     margin: 4% 2% 0 0 ;
-      color:ghostwhite;
-      padding: 2% 3% 2% 3%;
-      font-size: 3.5rem;
-      line-height: 1.3333333;
-      border-radius: 6px;
+    color:ghostwhite;
+    padding: 2% 3% 2% 3%;
+    font-size: 3.5rem;
+    line-height: 1.3333333;
+    border-radius: 6px;
   }
   .btn-lg:hover{
+    position:relative;
+    top: -10px;
     box-shadow:200px 200px 200px 200px rgba(0,0,0,0.5) inset;
     background-color:#212529;
     border-color: #212529;
-    margin: 4% 2% 0 0 ;
-      color:white;
-      padding: 2% 3% 2% 3%;
-      font-size: 3.5rem;
-      line-height: 1.3333333;
-      border-radius: 6px;
   }
   
-  @media (min-width: 768px) {
-    .masthead_home {
-      padding-top: 17rem;
-      padding-bottom: 20rem;
-    }
-    .masthead_home .masthead-createheading {
-      position: relative;
-      top: 50px;
-      font-size: 1.25rem;
-      font-style: italic;
-      line-height: 2.25rem;
-      margin-bottom: 2rem;
-    }
-    .masthead_home .masthead-subheading {
-      position:relative;
-      top: 20px;
-      font-size: 2.25rem;
-      font-style: italic;
-      line-height: 2.25rem;
-      margin-bottom: 2rem;
-    }
-    .masthead_home .masthead-heading {
-      font-size: 4.5rem;
-      font-weight: 700;
-      line-height: 4.5rem;
-      margin-bottom: 4rem;
-    }
-    
-    .btn-lg{
-      background-color:#212529;
-      margin: 4% 2% 0 0 ;
-        color:ghostwhite;
-        padding: 2% 3% 2% 3%;
-        font-size: 3.5rem;
-        line-height: 1.3333333;
-        border-radius: 6px;
-    }
-    .btn-lg:hover{
-      box-shadow:200px 200px 200px 200px rgba(0,0,0,0.5) inset;
-      background-color:#212529;
-      border-color: #212529;
-      margin: 4% 2% 0 0 ;
-        padding: 2% 3% 2% 3%;
-        font-size: 3.5rem;
-        line-height: 1.3333333;
-        border-radius: 6px;
-    }
-    
-  }
+}

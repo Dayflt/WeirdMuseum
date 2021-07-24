@@ -2,7 +2,6 @@
 import './css/Page.css';
 import './css/Home2.css';
 import React, {useEffect, useState} from 'react';
-import ReactPlayer from 'react-player';
 import { Link, useLocation } from "react-router-dom"; // 추가
 import api from '../api.jsx';
 import Modal from './components/Modal';
@@ -50,7 +49,6 @@ const Result = () => {//앞에서 넘겨온 id참조, 프록시 5000으로  "pro
   return (
     <div className="masthead_result">
       <header className="container">
-        <h1>Check video!!!</h1>
           <video autoPlay muted loop
             src={resultVideo}
             className="result_box"

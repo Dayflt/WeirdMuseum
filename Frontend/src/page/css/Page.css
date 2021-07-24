@@ -74,7 +74,6 @@ body {
   .masthead_result{
     padding-top: 10rem;
     padding-bottom: 20rem;
-
   }
   .barbox{
     margin : -20% 0 2% 0;
@@ -104,7 +103,7 @@ body {
 }
 
 
-.container , .container-lg, .container_gallery{
+.container , .container-lg, .container-xl{
   position: relative;
 }
 
@@ -136,6 +135,12 @@ body {
   object-fit: contain ;
   margin-bottom: 2%;
   
+}
+
+.webcam { 
+  width: 70% !important; 
+  max-width:80%;
+  height:auto;
 }
 
 .row_b{
