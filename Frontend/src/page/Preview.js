@@ -69,10 +69,10 @@ const Preview = ({ match }) => {
           </ul>
         </div>
         <h1 class="title">Your Choice! Keep Going?</h1>
-        <div className="ImageBox" style={{ margin: "3%" }}>
+        <div className="ImageBox" style={{ margin: "10%" }}>
           {!loadings && !result ? (
             <div>
-              <div class="container_preview row justify-content-center">
+              <div class="container_preview row row_2 justify-content-center">
                 <div class="col-sm-5 row">
                   <img class="img-fluid" src={pic[num]} alt="select img"></img>
                 </div>
@@ -88,7 +88,7 @@ const Preview = ({ match }) => {
             console.log("../Result/" + model)
           ) : (
             <div>
-              <h3>Loading ...</h3>
+              <h3>Refacing ...</h3>
               <PacmanLoader
                 css={override}
                 size={50}

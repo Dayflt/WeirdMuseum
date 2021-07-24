@@ -17,7 +17,7 @@ body {
   color: #fff;
   background-image: url("../img/bg.jpg");
   position: relative;
-  height: 100vh;
+  height: 110vh;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
@@ -29,7 +29,7 @@ body {
   color: #fff;
   background-image: url("../img/bg.jpg");
   position: relative;
-  height: 100%;
+  height: 110vh;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
@@ -60,7 +60,7 @@ body {
     padding-bottom: 20rem;
   }
   .masthead_result{
-    padding-top: 3rem;
+    padding-top: 10rem;
     padding-bottom: 20rem;
 
   }
@@ -71,6 +71,16 @@ body {
 
 /*가상 배경 설정으로 배경 투명도조정*/
 .masthead::before{
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000;
+}
+.masthead_result::before{
   content: "";
   opacity: 0.3;
   position: absolute;
@@ -101,11 +111,11 @@ body {
 /* plus이미지 */
 .img_plus{
   width: 500px;
-  height: auto;
+  height: 500px;
   object-fit: contain;
 }
 /* .row속성 */
-.row{
+.row {
   margin-right : 0;
   margin-left : 0;
 }

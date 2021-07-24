@@ -47,7 +47,7 @@ const Gallery = () => {
     <div className="masthead">
       <header className="container-lg p-3 mb-2 vh-80">
         <h1>
-          Gallery
+          Weird Gallery
         </h1>
         <div className="gallery_total">
           <div className="gallery_category" >
