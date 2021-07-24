@@ -1,7 +1,6 @@
 // eslint-disable-next-line
 import './css/Gallery.css';
 import React, {useEffect, useState} from 'react';
-import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
 import './css/Home2.css';
@@ -49,72 +48,64 @@ const Gallery = () => {
         <h1>
           Weird Gallery
         </h1>
-        <div className="gallery_total">
-          <div className="gallery_category" >
-            <div className="hashtag">#Hooray</div>
-            <hr></hr>
-            {user1.map((user , user_id) => (
-              <div className="gallery_no" key={user_id}>
-                <ReactPlayer 
-                  url={user.model_result}
-                  className="gallery_video"
-                  loop="true"
-                  playing="true"
-                  muted="true"
-                  width="80%"
-                  height="80%" />
-                <h6>{user.model_name}</h6>
-              </div>
-            ))}
-          </div>
-          <div className="gallery_category" >
-          <div className="hashtag">#OMG</div>
-            <hr></hr>
-            {user2.map((user , user_id) => (
-              <div className="gallery_no" key={user_id}>
-                <ReactPlayer 
-                  url={user.model_result}
-                  className="gallery_video"
-                  loop="true"
-                  playing="true"
-                  muted="true"
-                  width="80%"
-                  height="80%" />
-                <h6>{user.model_name}</h6>
-              </div>
-            ))}
-          </div>
-          <div className="gallery_category" >
-          <div className="hashtag">#DAMN</div><hr></hr>
-            {user3.map((user , user_id) => (
-              <div className="gallery_no" key={user_id}>
-                <ReactPlayer 
-                  url={user.model_result}
-                  className="gallery_video"
-                  loop="true"
-                  playing="true"
-                  muted="true"
-                  width="80%"
-                  height="80%" />
-                <h6>{user.model_name}</h6>
-              </div>
-            ))}
-          </div>
-          <div className="gallery_category" >
-          <div className="hashtag">#Holy_Moly</div><hr></hr>
-            {user4.map((user , user_id) => (
-              <div className="gallery_no" key={user_id}>
-                <ReactPlayer 
-                  url={user.model_result}
-                  className="gallery_video"
-                  loop="true"
-                  playing="true"
-                  muted="true"
-                  width="80%"
-                  height="80%" />
-                <h6>{user.model_name}</h6>
-              </div>
-            ))}
+        <div className="gallery_box">
+          <div className="gallery_total">
+            <div className="gallery_category" >
+              <div className="hashtag">#Hooray</div>
+              <hr></hr>
+              {user1.map((user , user_id) => (
+                <div className="gallery_no" key={user_id}>
+                  <video autoPlay muted loop
+                    src={user.model_result}
+                    className="gallery_video"
+                    width="80%"
+                    height="80%" />
+                  <h6>{user.model_name}</h6>
+                </div>
+              ))}
+            </div>
+            <div className="gallery_category" >
+              <div className="hashtag">#OMG</div>
+              <hr></hr>
+              {user2.map((user , user_id) => (
+                <div className="gallery_no" key={user_id}>
+                  <video autoPlay muted loop
+                    src={user.model_result}
+                    className="gallery_video"
+                    width="80%"
+                    height="80%" />
+                  <h6>{user.model_name}</h6>
+                </div>
+              ))}
+            </div>
+            <div className="gallery_category" >
+              <div className="hashtag">#DAMN</div>
+              <hr></hr>
+              {user3.map((user , user_id) => (
+                <div className="gallery_no" key={user_id}>
+                  <video autoPlay muted loop
+                    src={user.model_result}
+                    className="gallery_video"
+                    width="80%"
+                    height="80%" />
+                  <h6>{user.model_name}</h6>
+                </div>
+              ))}
+            </div>
+            <div className="gallery_category" >
+              <div className="hashtag">#Holy_Moly</div>
+              <hr></hr>
+              {user4.map((user , user_id) => (
+                <div className="gallery_no" key={user_id}>
+                  <video autoPlay muted loop
+                    src={user.model_result}
+                    className="gallery_video"
+                    width="80%"
+                    height="80%" />
+                  <h6>{user.model_name}</h6>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="button_box">
@@ -123,7 +114,7 @@ const Gallery = () => {
               TRY AGAIN
             </button>
           </Link>
-        </div>
+        </div>        
       </header>
     </div>
   )
