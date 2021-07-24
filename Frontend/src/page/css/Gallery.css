@@ -22,13 +22,13 @@
   
 }
 .gallery_total{
-  display: inline;
+  display: flex;
   width: auto;
   height: auto;
+  justify-content: center;
 }
 .gallery_category{
-    display: inline-grid;
-    width: 15%;
+    width: 20%;
     height: 100%;
 }
 .gallery_category > h5{
