@@ -109,9 +109,16 @@ body {
 
 /* #새로 추가한 image선택 앱상으로 안잘리도록 */
 .image-list{
-  width:35%;
-  height:30%;
+  width:60%;
+  height:60%;
   object-fit:cover;
+}
+@media(min-width:450px){
+  .image-list{
+    width:35%;
+    height:30%;
+    object-fit:cover;
+  }
 }
 
 .title{
