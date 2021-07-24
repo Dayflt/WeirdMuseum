@@ -45,7 +45,7 @@ const Gallery = () => {
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
     <div className="masthead">
-      <header className="container">
+      <header className="container-lg p-3 mb-2 vh-80">
         <h1>
           Gallery
         </h1>

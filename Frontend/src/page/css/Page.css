@@ -27,7 +27,7 @@ body {
 .masthead_result{
   text-align: center;
   color: #fff;
-  background-image: url("../img/home_bg.jpg");
+  background-image: url("../img/bg.jpg");
   position: relative;
   height: 100%;
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@ body {
 }
 
 
-.container , .container-lg, .container_gallery, .container_result{
+.container , .container-lg, .container_gallery{
   position: relative;
 }
 
