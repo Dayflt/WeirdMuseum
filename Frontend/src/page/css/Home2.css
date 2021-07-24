@@ -23,14 +23,31 @@ body {
     background-position: center top;
     background-size: cover;
   }
-  .masthead_home .masthead-subheading {
+  /*.masthead_home .masthead-subheading {
     position: relative;
-    top: 50px;
+    top: 100px;
     font-size: 1.5rem;
     font-style: italic;
     line-height: 1.5rem;
     margin-bottom: 25px;
     font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }*/
+  .masthead_home .masthead-subheading {
+    position:relative;
+    top: 20px;
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .masthead_home .masthead-createheading {
+    position: relative;
+    top: 50px;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
   }
 
   .masthead_home .masthead-heading {
@@ -42,8 +59,21 @@ body {
     margin-bottom: 2rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
-  .btn-group-lg>.btn, .btn-lg {
-    margin: 10% 2% 0 0 ;
+  .btn-lg{
+    background-color:#212529;
+    margin: 4% 2% 0 0 ;
+      color:ghostwhite;
+      padding: 2% 3% 2% 3%;
+      font-size: 3.5rem;
+      line-height: 1.3333333;
+      border-radius: 6px;
+  }
+  .btn-lg:hover{
+    box-shadow:200px 200px 200px 200px rgba(0,0,0,0.5) inset;
+    background-color:#212529;
+    border-color: #212529;
+    margin: 4% 2% 0 0 ;
+      color:white;
       padding: 2% 3% 2% 3%;
       font-size: 3.5rem;
       line-height: 1.3333333;
@@ -55,7 +85,17 @@ body {
       padding-top: 17rem;
       padding-bottom: 20rem;
     }
+    .masthead_home .masthead-createheading {
+      position: relative;
+      top: 50px;
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 2.25rem;
+      margin-bottom: 2rem;
+    }
     .masthead_home .masthead-subheading {
+      position:relative;
+      top: 20px;
       font-size: 2.25rem;
       font-style: italic;
       line-height: 2.25rem;
@@ -67,11 +107,25 @@ body {
       line-height: 4.5rem;
       margin-bottom: 4rem;
     }
-    .btn-group-lg>.btn, .btn-lg {
+    
+    .btn-lg{
+      background-color:#212529;
+      margin: 4% 2% 0 0 ;
+        color:ghostwhite;
+        padding: 2% 3% 2% 3%;
+        font-size: 3.5rem;
+        line-height: 1.3333333;
+        border-radius: 6px;
+    }
+    .btn-lg:hover{
+      box-shadow:200px 200px 200px 200px rgba(0,0,0,0.5) inset;
+      background-color:#212529;
+      border-color: #212529;
       margin: 4% 2% 0 0 ;
         padding: 2% 3% 2% 3%;
         font-size: 3.5rem;
         line-height: 1.3333333;
         border-radius: 6px;
     }
+    
   }
