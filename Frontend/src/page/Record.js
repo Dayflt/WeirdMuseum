@@ -3,7 +3,6 @@ import React, { useEffect, useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useRecordWebcam } from "react-record-webcam";
 import { Setb, Setburl } from "../App";
-import "./css/Home2.css";
 import t from './img/timer.png';
 
 const Record = ({ match }) => {
