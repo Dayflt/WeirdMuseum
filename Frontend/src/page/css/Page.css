@@ -34,6 +34,8 @@ body {
   background-attachment: scroll;
   background-position: center top;
   background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
 }
 
 .btn-bn{
@@ -71,7 +73,6 @@ body {
   .masthead_result{
     padding-top: 10rem;
     padding-bottom: 20rem;
-
   }
   .barbox{
     margin : -20% 0 2% 0;
@@ -101,7 +102,7 @@ body {
 }
 
 
-.container , .container-lg, .container_gallery{
+.container , .container-lg, .container-xl{
   position: relative;
 }
 
