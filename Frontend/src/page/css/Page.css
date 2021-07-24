@@ -135,8 +135,8 @@ body {
   
 }
 
-video { 
-  width:80% !important; 
+.webcam { 
+  width: 70% !important; 
   max-width:80%;
   height:auto;
 }
