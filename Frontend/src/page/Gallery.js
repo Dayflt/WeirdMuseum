@@ -3,8 +3,10 @@ import './css/Gallery.css';
 import React, {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";
-import star from './img/star110.png';
 import api from '../api.jsx';
+import ClipLoader from "react-spinners/ClipLoader";
+import './css/Home2.css';
+import { css } from "@emotion/react";
 
 const Gallery = () => {
   const [user1, setUser1] = useState(null);
@@ -12,6 +14,12 @@ const Gallery = () => {
   const [user3, setUser3] = useState(null);
   const [user4, setUser4] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: #ffffff;
+`;
   
   useEffect(() => {
     const fetchUsers = async () => {
@@ -40,19 +48,19 @@ const Gallery = () => {
   if (loading) 
     return (
       <div className="loading_box">
-        <div className="loading">갤러리 로딩중..</div>
+        <div className="loading">...</div>
       </div>)
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
-    <div className="Page">
-      <header className="Page-header">
+    <div className="masthead">
+      <header className="container_gallery">
         <h1>
-         <img src={star} className="Star-logo" alt="logo"></img>
-             Synthesize Images
+          Gallery
         </h1>
         <div className="gallery_total">
           <div className="gallery_category" >
-            <h5>😉</h5>
+            <div className="hashtag">#Hooray</div>
+            <hr></hr>
             {user1.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -61,14 +69,15 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>😟</h5>
+          <div className="hashtag">#OMG</div>
+            <hr></hr>
             {user2.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -77,14 +86,14 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>😨</h5>
+          <div className="hashtag">#DAMN</div><hr></hr>
             {user3.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -93,14 +102,14 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
           </div>
           <div className="gallery_category" >
-            <h5>🤪</h5>
+          <div className="hashtag">#Holy_Moly</div><hr></hr>
             {user4.map((user , user_id) => (
               <div className="gallery_no" key={user_id}>
                 <ReactPlayer 
@@ -109,8 +118,8 @@ const Gallery = () => {
                   loop="true"
                   playing="true"
                   muted="true"
-                  width="70%"
-                  height="70%" />
+                  width="80%"
+                  height="80%" />
                 <h6>{user.model_name}</h6>
               </div>
             ))}
@@ -118,7 +127,7 @@ const Gallery = () => {
         </div>
         <div className="button_box">
           <Link to ="../">  
-            <button className="RetryButton"> 
+            <button className="RetryButton"  class="btn btn-light btn-retry" > 
               TRY AGAIN
             </button>
           </Link>

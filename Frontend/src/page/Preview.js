@@ -60,6 +60,14 @@ const Preview = ({ match }) => {
   return (
     <div class="masthead">
       <div class="container-lg p-3 mb-2">
+        <div className="barbox">
+          <ul id="progressbar">
+            <li id="selection" class="active"><strong>SELECTION</strong></li>
+            <li id="webcam" class="active"><strong>WEBCAM</strong></li>
+            <li id="preview" class="active"><strong>PREVIEW</strong></li>
+            <li id="result"><strong>RESULT</strong></li>
+          </ul>
+        </div>
         <h1>Your Choice! Keep Going?</h1>
         <div className="ImageBox" style={{ margin: "3%" }}>
           {!loadings && !result ? (
