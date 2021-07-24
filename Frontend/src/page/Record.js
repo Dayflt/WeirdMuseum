@@ -63,10 +63,11 @@ const Record = ({ match }) => {
         <div class="container d-block">
           <div style={{ display: "block" }}>
             {re_state ? (
-              <div class="container p-3 mb-2">
+              <div class="container-lg row row_b mt-5">
                 <div class="pt-4">
                   {" "}
                   <video
+                    class="webcam"
                     ref={recordWebcam.previewRef}
                     autoPlay
                     muted
@@ -77,8 +78,8 @@ const Record = ({ match }) => {
             ) : (
               <div class="container-lg row row_b mt-5">
                 <img src={t} class="timer " alt="timer" height="60px"/>
-                <video 
-                  class = "center-block"
+                <video
+                  class="webcam"
                   ref={recordWebcam.webcamRef}
                   autoPlay
                   muted
