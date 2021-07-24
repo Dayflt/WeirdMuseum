@@ -23,12 +23,12 @@ const Selection = () => {
             <li id="result"><strong>RESULT</strong></li>
           </ul>
         </div>
-        <h1>
+        <h1 class="title">
           Choose your face!
         </h1>
         <div class="container mt-5">
           <div>
-            <img  src={pic[num]} alt="select img"/>
+            <img class="image-list" src={pic[num]} alt="select img"/>
           </div>
           <div class="m-3">
             <button type="button" class="btn-number" onClick={() => { m_num(0) }}> 1</button>

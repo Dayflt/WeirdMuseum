@@ -57,7 +57,7 @@ const Record = ({ match }) => {
             <li id="result"><strong>RESULT</strong></li>
           </ul>
         </div>
-        <h1>Record Your Face!</h1>
+        <h1 class="title">Record Your Face!</h1>
         <div class="container d-block">
           <div style={{ display: "block" }}>
             {re_state ? (
