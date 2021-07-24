@@ -9,7 +9,7 @@ const Home2 =() => {
       <header>
         <div class="masthead_home">
           <div class="container_home">
-            <div class="masthead-subheading">Created by DayFly🦟</div>
+            <div class="masthead-createheading">Created by DayFly🦟</div>
             <div class="masthead-heading text-uppercase">Welcome To Weird Museum</div>
             <div class="masthead-subheading">Let's make a realistic face swap!</div>
             <div className="button_box">
