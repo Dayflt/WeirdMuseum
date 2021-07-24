@@ -23,7 +23,6 @@ body {
   background-position: center top;
   background-size: cover;
 }
-
 .masthead_home .masthead-createheading {
   position: relative;
   top: -60px;
@@ -114,6 +113,8 @@ body {
     border-radius: 6px;
   }
   .btn-lg:hover{
+    position:relative;
+    top: -10px;
     box-shadow:200px 200px 200px 200px rgba(0,0,0,0.5) inset;
     background-color:#212529;
     border-color: #212529;
