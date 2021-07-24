@@ -44,7 +44,7 @@ const Gallery = () => {
   if (!user1 || !user2 || !user3 || !user4) return null;
   else return (
     <div className="masthead">
-      <header className="container-lg p-3 mb-2 vh-80">
+      <header className="container-xl p-3 mb-2">
         <h1>
           Weird Gallery
         </h1>
@@ -110,7 +110,7 @@ const Gallery = () => {
         </div>
         <div className="button_box">
           <Link to ="../">  
-            <button className="RetryButton"  class="btn btn-light btn-retry" > 
+            <button className="RetryButton" class="btn btn-light btn-retry" > 
               TRY AGAIN
             </button>
           </Link>
