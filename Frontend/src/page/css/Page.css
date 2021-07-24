@@ -136,6 +136,11 @@ body {
   
 }
 
+.webcam { 
+  width: 70% !important; 
+  max-width:80%;
+  height:auto;
+}
 
 .row_b{
   display: block;
