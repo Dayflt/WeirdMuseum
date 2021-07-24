@@ -49,14 +49,11 @@ const Result = () => {//앞에서 넘겨온 id참조, 프록시 5000으로  "pro
   return (
     <div className="masthead_result">
       <header className="container">
-        <h1>Check video!!!</h1>
-        <div className="result_box">
           <video autoPlay muted loop
             src={resultVideo}
-            className="result"
-            width="30%"
-            height="30%" />
-        </div>
+            className="result_box"
+            width="55%"
+          />
         <div className="button_box1">
           <a href={resultVideo} download>
             <button className="SaveButton" class="btn btn-primary btn-ss" >

@@ -38,10 +38,11 @@ body {
   padding-bottom: 20rem;
 }
 
+
 .btn-bn{
   margin: 0% 2% 0 2% ;
 	padding: 0% 2% 0% 2%;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	line-height: 1.3333333;
 	border-radius: 4px;
   border-color: aliceblue;
@@ -108,14 +109,14 @@ body {
 
 /* #새로 추가한 image선택 앱상으로 안잘리도록 */
 .image-list{
-  width:30%;
+  width:35%;
   height:30%;
   object-fit:cover;
 }
 
 .title{
-  margin-top: 3rem;
-  margin-bottom: -1.5rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 /* preview page */
 /* plus이미지 */
@@ -255,23 +256,28 @@ body {
 /*result.page*/
 .result_box{
   text-align: center;
+  vertical-align: middle;
+  margin:4rem;
+  margin-top: -5rem;
+  margin-bottom: 1rem;
+  object-fit:cover;
+  border-style: double;
+  border: 5px solid whitesmoke;
 }
 
-.result{
-  display: inline-block;
-}
 
 .btn-ss{
-  margin: 1.5% 4% 0 4% ;
+  margin: 1.5% 4% 1.5% 4% ;
 	padding: 1% 2% 1% 2%;
 	font-size: 1.3rem;
 	line-height: 1.3333333;
 	border-radius: 4px;
+  border-color: #fff
 }
 
 .btn-retry{
   background-color:#212529;
-  margin: 1.5% 2% 0 2% ;
+  margin: 1% 2% 1% 2% ;
   color:ghostwhite;
   padding: 1.5% 3% 1.5% 3%;
 	font-size: 2.5rem;
