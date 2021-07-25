@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import './css/Page.css';
-import './css/Home2.css';
+import './css/Home.css';
 import React, {useEffect, useState} from 'react';
 import { Link, useLocation } from "react-router-dom"; // 추가
 import api from '../api.jsx';

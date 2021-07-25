@@ -3,7 +3,7 @@ import './css/Gallery.css';
 import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
-import './css/Home2.css';
+import './css/Home.css';
 
 const Gallery = () => {
   const [user1, setUser1] = useState(null);

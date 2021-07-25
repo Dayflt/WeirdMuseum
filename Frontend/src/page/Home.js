@@ -1,9 +1,9 @@
 // eslint-disable-next-line
-import './css/Home2.css';
+import './css/Home.css';
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const Home2 =() => {
+const Home =() => {
   return (
     <div>
       <header>
@@ -30,4 +30,4 @@ const Home2 =() => {
     </div>
   );
 }
-export default Home2;
+export default Home;
