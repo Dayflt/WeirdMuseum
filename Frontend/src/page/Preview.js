@@ -24,8 +24,9 @@ const Preview = ({ match }) => {
 
   const override = css`
     display: block;
-    margin: 2% 0% 20% 40%;
+    margin: auto;
     border-color: #ffffff;
+    right: 5vh;
   `;
 
   const send = async() => {
@@ -87,8 +88,8 @@ const Preview = ({ match }) => {
           ) : result ? (
             console.log("../Result/" + model)
           ) : (
-            <div>
-              <h3 class="reface">Refacing ...</h3>
+            <div className="pacman">
+              <h3>Refacing ...</h3>
               <PacmanLoader 
                 css={override}
                 size={45}

@@ -58,15 +58,8 @@ body {
 	border-radius: 4px;
   border-color: aliceblue;
 }
-.reface{
-  position: relative;
-  top:-12px;
-}
+
 @media (min-width:800px) {
-  .reface{
-    position: relative;
-    top:-80px;
-  }
   .btn-bnn{
     position:relative;
     top: -40px;
@@ -132,9 +125,6 @@ body {
   bottom: 0px;
   background-color: #000;
 }
-
-
-
 
 .container , .container-lg, .container-xl{
   position: relative;
@@ -364,10 +354,6 @@ body {
 	border-radius: 4px;
 }
 
-.css-njgsn5{
-  right: 6vh;
-}
-
 .pacman{
-  height: 20vh;
+  height: 15vh;
 }
