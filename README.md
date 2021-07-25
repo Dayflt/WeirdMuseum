@@ -1,52 +1,60 @@
-# Weird Museum - Dayfly
+# 👻 Weird Museum 👻 - Dayfly
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<b> 👻 Weird Museum 👻</b> is a web service where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target image by just taking a short video clip.
+<b>Weird Museum</b> is a responsive website where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target painting by just taking a short video clip.
+
+
+
+## 👀 User Interface 
+![MainPage](https://user-images.githubusercontent.com/72537563/126889753-1cbe2612-adcf-449f-8081-73e93dacd235.png)
+<!-- ![Select](https://user-images.githubusercontent.com/72537563/126889798-69a1e3e6-9c3f-4352-bbbd-78c566bd1d85.png) -->
+
+## 💡 Tech Stack
+```
+- Frontend : React
+- API Server : Flask
+- Deep learning : Pytorch, Colab
+- Middleware : Gunicorn
+- Web Server : Nginx
+- Deployment: Docker, NHN Cloud, GCP(Cloud SQL, GCS bucket)
+- Database: PostgreSQL
+- API Test : Postman
+- API Documentation : Swagger
+- Version Control : Git, Github, GitKraken
+```
+
+|         Frontend         |      Backend      |         etc          |
+| :----------------------: | :---------------: | :------------------: |
+| ![react](https://img.shields.io/badge/react-v17.0.2-9cf?logo=react) ![Nodejs](https://img.shields.io/badge/Nodejs-v14.16.0-blue?logo=node.js)   ![Javascript](https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript) ![Bootstrap](https://img.shields.io/badge/bootstrap-v1.4.3-9cf?logo=bootstrap) ![axios](https://img.shields.io/badge/axios-v0.21.1-9cf?color=purple)| ![Flask](https://img.shields.io/badge/flask-v2.0.1-green?logo=flask)  ![Python](https://img.shields.io/badge/python-v3.8.10-skyblue?logo=python) ![Gunicorn](https://img.shields.io/badge/gunicorn-v20.1.0-darkgreen?logo=gunicorn) ![postgreSQL](https://img.shields.io/badge/postgreSQL-v12.0-blue?logo=postgresql) ![Pytorch](https://camo.githubusercontent.com/5182d780a87ed9c5b2003da7788da5229e02f0713feaf4605682eb890f897d59/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7079746f7263682d626c75653f6c6f676f3d7079746f726368) ![Colab](https://camo.githubusercontent.com/262664d89515ac916d0e1a7e5b90f047caac9c16515aa2139df56bd67523ca6c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6c61622d6461726b677265656e3f6c6f676f3d476f6f676c65436f6c6162)  | ![Docker](https://img.shields.io/badge/docker-v20.10.7-brightgreen?logo=docker)  ![Nginx](https://img.shields.io/badge/Nginx-v1.21.1-brightgreen?logo=nginx)   ![github](https://img.shields.io/badge/github-gray?logo=github)![VScode](https://img.shields.io/badge/VScode-v1.58.1-blue?logo=visual-studio-code) ![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud_Platform-VM_instance-red?logo=gcp) ![GitKraken](https://img.shields.io/badge/GitKraken-gray?logo=GitKraken) ![Swagger](https://img.shields.io/badge/Swagger-gray?logo=Swagger) ![Postman](https://img.shields.io/badge/Postman-gray?logo=Postman) ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white) ![NHNcloud](https://camo.githubusercontent.com/f1b8b16600d3210298fa1971ec94ed1f41cb80146f76f4c9754a075b972970e6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e484e5f436c6f75645f5562756e74752d32302e30342d626c75653f6c6f676f3d7562756e7475)|  
 
 ## 💻 System Architecture
 
-![시스템아키텍쳐-최종](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png)
+![시스템아키텍쳐](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png)
 
-#### Frontend
-- React
-#### Backend
-- API Server :  Flask
-- Database : PostgreSQL
-- Middleware : gunicorn
-- Web Server : Nginx
-
-#### Deploy
-- Docker
-- NHN Cloud
-- GCP : Cloud SQL (Postgresql), GCS Bucket (S3)
-
-#### Etc
-- Version Control : Git, Github, GitKraken
-- API Test : Postman
-- API Documentation : Swagger
-
-
+## ✅ Main POC
+- Create a face swap video by animating the target image
+- Save result video and share it at gallery page categorized by hashtag 
 
 
 ## ✏️ Getting Started (Prerequisities & Installing & Running)
 
-### 1. Cloning
+#### 1. Cloning
 ```
 $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 ```
 
-### 2. Frontend: React ⚛️
-  - install packages
-    ```
-    $ cd Frontend
-    $ npm i
-    ```
-### 3.  Backend: Flask 🌶
-  - Download *vox-cpk.pth.tar* [here](https://drive.google.com/drive/folders/1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH) and add it inside Docker\Backend\web\AI\ directory after changing its name with <b>mraa.tar</b>
-
-### 4.  Docker 🐳
-  #### Development environment 
+#### 2. Frontend: React ⚛️
+  - Install packages
+  ```
+  $ cd Frontend
+  $ npm i
+  ```
+#### 3.  Backend: Flask 🌶
+  - Download <b> vox-cpk.pth.tar</b> [here](https://drive.google.com/drive/folders/1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH) and add it inside Docker\Backend\web\AI\ directory after changing its name with <b>mraa.tar </b>
+  
+#### 4.  Docker 🐳
+  ##### ✔ Development environment 
   ```
   $ docker-compose up --build  # build images and run containers
   $ docker-compose down #stop running containers
@@ -69,13 +77,13 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   http://localhost:3000           # React application
   ```
   
-  #### Production environment
+  ##### ✔ Production environment
   
   1. Check whether 80 and 443 ports are open 
   
   2. Modify configuration
-  - Change *domains* and *email addresses* in init-letsencrypt.sh
-  - Replace all occurrences of *weirdmuseum.ml* with your domain ex) server_name museum.ml -> server_name 'your domain'
+  - Change <b>domains</b> and <b>email addresses</b> in init-letsencrypt.sh
+  - Replace all occurrences of <b>weirdmuseum.ml</b> with your domain (ex: server_name museum.ml -> server_name 'your domain')
   
   3. Run the init script to obtain SSL Certificates and Credentials (./certbot directory will be created)
   ```
@@ -114,19 +122,14 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   $ docker network prune # remove all unused network
   $ docker volume prune  # remove all unused local volume
   ```
-### 📗 SWAGGER
+  
+## 📗 SWAGGER
 ![20210717_195035](https://user-images.githubusercontent.com/79822913/126034610-20bff471-7e80-48c8-88f8-c30e28dfd37d.png)
 
-### 👀 Used Model
+## 👀 Used Model
 [Transfer model](https://github.com/AliaksandrSiarohin/first-order-model)  
         
 
-
-## 💡 Tech Stack
-
-|         Frontend         |      Backend & AI      |         etc          |
-| :----------------------: | :---------------: | :------------------: |
-| ![react](https://img.shields.io/badge/react-v17.0.2-9cf?logo=react) ![Nodejs](https://img.shields.io/badge/Nodejs-v14.16.0-blue?logo=node.js)   ![Javascript](https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript) ![Bootstrap](https://img.shields.io/badge/bootstrap-v1.4.3-9cf?logo=bootstrap) ![axios](https://img.shields.io/badge/axios-v0.21.1-9cf?color=purple)| ![Flask](https://img.shields.io/badge/flask-v2.0.1-green?logo=flask)  ![Python](https://img.shields.io/badge/python-v3.8.10-skyblue?logo=python) ![Gunicorn](https://img.shields.io/badge/gunicorn-v20.1.0-darkgreen?logo=gunicorn) ![postgreSQL](https://img.shields.io/badge/postgreSQL-v12.0-blue?logo=postgresql) ![Pytorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white)   | ![Docker](https://img.shields.io/badge/docker-v20.10.7-brightgreen?logo=docker)  ![Nginx](https://img.shields.io/badge/Nginx-v1.21.1-brightgreen?logo=nginx)   ![github](https://img.shields.io/badge/github-gray?logo=github)![VScode](https://img.shields.io/badge/VScode-v1.58.1-blue?logo=visual-studio-code) ![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud_Platform-VM_instance-red?logo=gcp) ![GitKraken](https://img.shields.io/badge/GitKraken-gray?logo=GitKraken) ![Swagger](https://img.shields.io/badge/Swagger-gray?logo=Swagger) ![Postman](https://img.shields.io/badge/Postman-gray?logo=Postman) ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)|  
 
 ## 🔧 Directory Structure
 ```bash
@@ -185,7 +188,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 └── .gitignore		
 ```  
 
-### 🔍 Other repos
+## 🔍 Other repos
 - [Backend repository](https://github.com/Dayflt/Backend.git)  
 - [Frontend repository](https://github.com/Dayflt/Frontend.git)
 
