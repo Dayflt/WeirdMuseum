@@ -48,7 +48,7 @@
 
 .gallery_no > h6{
     margin: 0%;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .button_box{
@@ -64,7 +64,11 @@
     margin: 0;
     font-size: 60%;
   }
-  .RetryButton {
-    font-size: 100%;
+}
+
+@media all and (min-width:1400px){
+  .gallery_video{
+    width: 55%;
+    height: 55%;
   }
 }
