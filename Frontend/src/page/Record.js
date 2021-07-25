@@ -77,7 +77,7 @@ const Record = ({ match }) => {
               </div>
             ) : (
               <div class="container-lg row row_b mt-5">
-                <img src={t} class="timer " alt="timer" height="60px"/>
+                <img src={t} class="timer " alt="timer" height="50px"/>
                 <video
                   class="webcam"
                   ref={recordWebcam.webcamRef}
