@@ -27,6 +27,7 @@ const Preview = ({ match }) => {
     margin: auto;
     border-color: #ffffff;
     display:flex;
+    right : 2vh;
   `;
 
   const send = async() => {
@@ -87,7 +88,7 @@ const Preview = ({ match }) => {
             console.log("../Result/" + model)
           ) : (
             <div className="pacman">
-              <h3>Refacing ...</h3>
+              <h3 className="refacing">Refacing ...</h3>
               <PacmanLoader 
                 css={override}
                 size={45}

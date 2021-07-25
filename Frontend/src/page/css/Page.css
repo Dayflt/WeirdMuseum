@@ -359,12 +359,16 @@ body {
 	border-radius: 4px;
 }
 
+.refacing{
+  margin-bottom: 1em;  
+}
+
 .pacman{
   height: 20vh;
 }
 
 @media all and (max-width: 799px) {
   .pacman{
-    height: 6vh;
+    height: 8vh;
   }
 }
