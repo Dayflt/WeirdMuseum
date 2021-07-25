@@ -164,9 +164,11 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 │   ├── public/                                       - 프론트앤드 디폴트 디렉토리
 │   ├── package.json & package.lock.json           
 │   └── src/ 
-│        ├── App.js & App.test.js & setupTest.js
-│        ├── App.css
 │        ├── index.js & index.css
+│        ├── App.js & App.css
+│        ├── App.test.js & setupTest.js
+|        ├── reportWebVitals.js
+│        ├── api.jsx                                   - baseurl 설정
 │        └── page/
 │   	        ├── css /                              - 컴포넌트들의 css
 │   	        ├── imgs /                             - 컴포넌트들의 image
