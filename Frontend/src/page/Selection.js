@@ -30,7 +30,7 @@ const Selection = () => {
           <div>
             <img class="image-list" src={pic[num]} alt="select img"/>
           </div>
-          <div class="m-3">
+          <div>
             <button type="button" class="btn-number" onClick={() => { m_num(0) }}> 1</button>
             <button type="button" class="btn-number" onClick={() => { m_num(1) }}> 2</button>
             <button type="button" class="btn-number" onClick={() => { m_num(2) }}> 3</button>
