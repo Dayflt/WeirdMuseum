@@ -133,6 +133,7 @@ body {
 
 @media(min-width:450px){
   .subtitle{
+    font-size: 25px;
     margin-top: 1rem;
     margin-bottom: -1rem;
   }
@@ -142,10 +143,15 @@ body {
     object-fit:cover;
   }
   .timer{
+    margin-top: -3px;
     height: 60px;
   }
+  .webcam { 
+    width: 70% !important; 
+    max-width:80%;
+    height:auto;
+  }
 }
-
 
 
 /* preview page */
@@ -168,8 +174,8 @@ body {
 }
 
 .webcam { 
-  width: 70% !important; 
-  max-width:80%;
+  width: 100%; 
+  max-width:100%;
   height:auto;
 }
 
