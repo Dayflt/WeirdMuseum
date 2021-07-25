@@ -88,10 +88,10 @@ const Preview = ({ match }) => {
             console.log("../Result/" + model)
           ) : (
             <div>
-              <h3>Refacing ...</h3>
-              <PacmanLoader
+              <h3 class="reface">Refacing ...</h3>
+              <PacmanLoader 
                 css={override}
-                size={50}
+                size={45}
                 color={"#f2ddcc"}
                 loading={loadings}
               />
