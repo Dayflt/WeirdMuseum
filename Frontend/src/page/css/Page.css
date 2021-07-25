@@ -103,8 +103,20 @@ body {
 }
 
 
+
+
 .container , .container-lg, .container-xl{
   position: relative;
+}
+
+.title{
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.subtitle{
+  margin-top: 0.5rem;
+  margin-bottom: -2rem;
 }
 
 /* #새로 추가한 image선택 앱상으로 안잘리도록 */
@@ -114,17 +126,19 @@ body {
   object-fit:cover;
 }
 @media(min-width:450px){
+  .subtitle{
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
   .image-list{
-    width:35%;
-    height:30%;
+    width:25%;
+    height:25%;
     object-fit:cover;
   }
 }
 
-.title{
-  margin-top: 1rem;
-  margin-bottom: -1rem;
-}
+
+
 /* preview page */
 /* plus이미지 */
 .img_plus{

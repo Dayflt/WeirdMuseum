@@ -59,7 +59,7 @@ const Record = ({ match }) => {
           </ul>
         </div>
         <h1 class="title">Record Your Face!</h1>
-        <p class="mt-3 fs-4"> Make your face close to the camera and show whatever facial expression you want </p>
+        <p class="subtitle"> Make your face close to the camera and show whatever facial expression you want </p>
         <div class="container d-block">
           <div style={{ display: "block" }}>
             {re_state ? (
