@@ -103,21 +103,57 @@ body {
 }
 
 
+
+
 .container , .container-lg, .container-xl{
   position: relative;
-}
-
-/* #새로 추가한 image선택 앱상으로 안잘리도록 */
-.image-list{
-  width:35%;
-  height:30%;
-  object-fit:cover;
 }
 
 .title{
   margin-top: 1rem;
   margin-bottom: -1rem;
 }
+
+.subtitle{
+  margin-top: 1.5rem;
+  line-height: 100%;
+  margin-bottom: -2.2rem;
+}
+
+/* #새로 추가한 image선택 앱상으로 안잘리도록 */
+.image-list{
+  width:60%;
+  height:60%;
+  object-fit:cover;
+}
+
+.timer{
+  height: 30px;
+}
+
+@media(min-width:450px){
+  .subtitle{
+    font-size: 25px;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+  .image-list{
+    width:25%;
+    height:25%;
+    object-fit:cover;
+  }
+  .timer{
+    margin-top: -3px;
+    height: 60px;
+  }
+  .webcam { 
+    width: 70% !important; 
+    max-width:80%;
+    height:auto;
+  }
+}
+
+
 /* preview page */
 /* plus이미지 */
 .img_plus{
@@ -138,8 +174,8 @@ body {
 }
 
 .webcam { 
-  width: 70% !important; 
-  max-width:80%;
+  width: 100%; 
+  max-width:100%;
   height:auto;
 }
 
