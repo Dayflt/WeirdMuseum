@@ -24,7 +24,7 @@ const Preview = ({ match }) => {
 
   const override = css`
     display: block;
-    margin: 0 auto;
+    margin: 2% 0% 20% 40%;
     border-color: #ffffff;
   `;
 
@@ -100,12 +100,12 @@ const Preview = ({ match }) => {
         </div>
         <div>
           <Link to={`../Record/${num}`}>
-            <button type="button" class="btn btn-primary btn-bn">
+            <button type="button" class="btn btn-primary btn-bnn">
               <i class="bi-caret-left" />
               BACK
             </button>
           </Link>
-          <button type="button" class="btn btn-primary btn-bn" onClick={send}>
+          <button type="button" class="btn btn-primary btn-bnn" onClick={send}>
           NEXT
           <i class="bi-caret-right"/>
         </button>
