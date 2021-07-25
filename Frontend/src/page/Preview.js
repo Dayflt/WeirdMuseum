@@ -87,14 +87,16 @@ const Preview = ({ match }) => {
           ) : result ? (
             console.log("../Result/" + model)
           ) : (
-            <div>
+            <div className="pacman">
               <h3>Refacing ...</h3>
-              <PacmanLoader
-                css={override}
-                size={50}
-                color={"#f2ddcc"}
-                loading={loadings}
-              />
+              <div>
+                <PacmanLoader
+                  css={override}
+                  size={50}
+                  color={"#f2ddcc"}
+                  loading={loadings}
+                />
+              </div>
             </div>
           )}
         </div>
