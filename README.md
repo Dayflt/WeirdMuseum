@@ -168,7 +168,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 │        ├── App.js & App.css
 │        ├── App.test.js & setupTest.js
 |        ├── reportWebVitals.js
-│        ├── api.jsx                                   - baseurl 설정
+│        ├── api.jsx                                   - baseURL 설정
 │        └── page/
 │   	        ├── css /                              - 컴포넌트들의 css
 │   	        ├── imgs /                             - 컴포넌트들의 image
