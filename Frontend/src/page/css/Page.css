@@ -355,5 +355,11 @@ body {
 }
 
 .pacman{
-  height: 15vh;
+  height: 20vh;
+}
+
+@media all and (max-width: 799px) {
+  .pacman{
+    height: 6vh;
+  }
 }

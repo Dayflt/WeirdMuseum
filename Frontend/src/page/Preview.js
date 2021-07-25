@@ -26,7 +26,7 @@ const Preview = ({ match }) => {
     display: block;
     margin: auto;
     border-color: #ffffff;
-    right: 5vh;
+    display:flex;
   `;
 
   const send = async() => {
