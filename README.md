@@ -43,22 +43,22 @@
 
 ## ✏️ Getting Started (Prerequisities & Installing & Running)
 
-#### 1. Cloning
+### 1. Cloning
 ```
 $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 ```
 
-#### 2. Frontend: React ⚛️
+### 2. Frontend: React ⚛️
   - Install packages
   ```
   $ cd Frontend
   $ npm i
   ```
-#### 3.  Backend: Flask 🌶
+### 3.  Backend: Flask 🌶
   - Download <b> vox-cpk.pth.tar</b> [here](https://drive.google.com/drive/folders/1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH) and add it inside Docker\Backend\web\AI\ directory after changing its name with <b>mraa.tar </b>
   
-#### 4.  Docker 🐳
-  ##### ✔ Development environment 
+### 4.  Docker 🐳
+  #### ✔ Development environment 
   ```
   $ docker-compose up --build  # build images and run containers
   $ docker-compose down #stop running containers
@@ -81,7 +81,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   http://localhost:3000           # React application
   ```
   
-  ##### ✔ Production environment
+  #### ✔ Production environment
   
   1. Check whether 80 and 443 ports are open 
   
