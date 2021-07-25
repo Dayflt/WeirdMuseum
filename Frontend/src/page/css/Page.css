@@ -190,8 +190,8 @@ body {
 /* preview page */
 /* plus이미지 */
 .img_plus{
-  width: 500px;
-  height: 500px;
+  width: 80px;
+  /* height: 500px; */
   object-fit: contain;
 }
 /* .row속성 */
@@ -214,6 +214,11 @@ body {
 
 .row_b{
   display: block;
+}
+
+.previewcam { 
+  object-fit: none !important;
+  overflow: hidden;
 }
 
 /*progressbar 설정*/

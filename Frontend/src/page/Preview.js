@@ -69,19 +69,17 @@ const Preview = ({ match }) => {
           </ul>
         </div>
         <h1 class="title">Your Choice! Keep Going?</h1>
-        <div className="ImageBox" style={{ margin: "10%" }}>
+        <div style={{ margin: "5%" }}>
           {!loadings && !result ? (
-            <div>
-              <div class="container_preview row row_2 justify-content-center">
-                <div class="col-sm-5 row">
-                  <img class="img-fluid" src={pic[num]} alt="select img"></img>
-                </div>
-                <div class="col-sm-1 h-20 center-block row">
-                  <img className="img_plus" src={plus} alt="plus img"></img>
-                </div>
-                <div class="col-sm-5 row">
-                  <video class="img-fluid" src={burl} autoPlay muted loop />
-                </div>
+            <div class="container_preview row row_2 justify-content-center">
+              <div class="col-sm-5 row">
+                <img class="img-fluid" src={pic[num]} alt="select img"></img>
+              </div>
+              <div class="col-sm-1 h-20 center-block row justify-content-center">
+                <img class="img_plus py-4" src={plus} alt="plus img"></img>
+              </div>
+              <div class="col-sm-5 row">
+                <video class="img-fluid previewcam" src={burl} autoPlay muted loop />
               </div>
             </div>
           ) : result ? (
