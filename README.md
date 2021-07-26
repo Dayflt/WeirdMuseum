@@ -2,16 +2,19 @@
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-<b>Weird Museum</b> is a responsive website where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target painting by just taking a short video clip.
+<b>Weird Museum</b> is a responsive web where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target painting by just taking a short video clip.
 
 ✨ [See our website!](https://weirdmuseum.ml) ✨
 
 ## 🔍 User Interface 
 #### Main ➡️ Select ➡️ Record ➡️ Preview ➡️ Result ➡️ Gallery
-![Main-web](https://user-images.githubusercontent.com/72537563/126889753-1cbe2612-adcf-449f-8081-73e93dacd235.png)
+
+![Demo-app](https://user-images.githubusercontent.com/72537563/126996758-0eec7189-5241-4c83-8d3f-cf811806d040.gif)
+
+<!-- ![Main-web](https://user-images.githubusercontent.com/72537563/126889753-1cbe2612-adcf-449f-8081-73e93dacd235.png) -->
 <!-- ![Select](https://user-images.githubusercontent.com/72537563/126889798-69a1e3e6-9c3f-4352-bbbd-78c566bd1d85.png) -->
 
-(데모영상 추가예정)
+
 
 ## 💡 Tech Stack
 ```
@@ -26,7 +29,7 @@
 - API Documentation : Swagger
 - Version Control : Git, Github, GitKraken
 ```
-➡️ [Why do we choose these tech stacks for this project?]()  (추가예정)
+➡️ [Why do we choose these tech stacks for this project?](https://quartz-hip-22c.notion.site/e6bc1ea381be426888651bbfe5a572f6) 
 
 |         Frontend         |      Backend      |         etc          |
 | :----------------------: | :---------------: | :------------------: |
