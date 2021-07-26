@@ -1,6 +1,6 @@
 # 👻 Weird Museum 👻 - Dayfly 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <b>Weird Museum</b> is a responsive website where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target painting by just taking a short video clip.
 
@@ -76,9 +76,9 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
    ```
   - Running 
   ```
-  http://localhost:5000         # Flask application
-  http://localhost:5000/swagger # Swagger
-  http://localhost:3000           # React application
+  http://localhost:5000              # Flask application
+  http://localhost:5000/swagger      # Swagger
+  http://localhost:3000              # React application
   ```
   
   #### ✔ Production environment
