@@ -204,5 +204,5 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 | 김서연 | 방근영 | 이지혜 | 장현우 | 김하은 |
 | :----: | :----: | :----: |:----: | :----: |
 | [@ksy991018](https://github.com/ksy991018) | [@banggu0321](https://github.com/banggu0321) | [@penguin1109](https://github.com/penguin1109) |[@aswooo](https://github.com/aswooo) |[@harloxx](https://github.com/harloxx) |
-| Project Manager,DevOps | Front-end Developer | AI, Back-end Developer |Front-end Developer |AI, Backend-Developer |
+|Project Manager,DevOps| Front-end Developer| AI, Back-end Developer |Front-end Developer |AI, Backend-Developer |
 
