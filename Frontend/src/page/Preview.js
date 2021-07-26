@@ -32,7 +32,7 @@ const Preview = ({ match }) => {
 
   const send = async() => {
     const formData = new FormData();
-    const file = new File([data], 'test.mp4', { type: 'video/mp4'})
+    const file = new File([data], String(Math.floor(Math.random()*10000))+'test.mp4', { type: 'video/mp4'})
     const config = {
       header: { "content-type": "multipart/form-data" },
     };
