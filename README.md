@@ -128,7 +128,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   ```
   
 ## 📗 SWAGGER
-https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3  
++ https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3  
 ![swagger](https://user-images.githubusercontent.com/72537563/126892065-b92c3f84-adc5-4fd4-86a5-64d118f63b49.png)
 
 ## 👀 Used Model
