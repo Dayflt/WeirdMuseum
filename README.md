@@ -183,7 +183,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 │   	        ├── Result.js                          - 결과물 페이지
 │   	        ├── Selection.js                       - 사진 선택 페이지
 │   	        └── components/                        
-│                   └── Modal.js                      - 결과물의 정보 입력 페이지
+│                   └── Modal.js                      - 결과물의 정보 입력 팝업창
 ├── Nginx/
 │   ├── Dockerfile                                    - nginx 도커파일
 │   └── nginx.conf                                    - nginx 설정파일
