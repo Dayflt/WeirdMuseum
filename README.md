@@ -9,10 +9,10 @@
 ## 🔍 User Interface 
 #### Main ➡️ Select ➡️ Record ➡️ Preview ➡️ Result ➡️ Gallery
 
-![Demo-web](https://user-images.githubusercontent.com/72537563/127084314-5bda5930-3d18-45f6-8440-583053334e1a.gif)
-![Demo-app](https://user-images.githubusercontent.com/72537563/126996758-0eec7189-5241-4c83-8d3f-cf811806d040.gif)
-<!-- ![Main-web](https://user-images.githubusercontent.com/72537563/126889753-1cbe2612-adcf-449f-8081-73e93dacd235.png) -->
-<!-- ![Select](https://user-images.githubusercontent.com/72537563/126889798-69a1e3e6-9c3f-4352-bbbd-78c566bd1d85.png) -->
+<p>
+  <img src="https://user-images.githubusercontent.com/72537563/127084314-5bda5930-3d18-45f6-8440-583053334e1a.gif" width="600" height="333"/>  
+  <img src="https://user-images.githubusercontent.com/72537563/126996758-0eec7189-5241-4c83-8d3f-cf811806d040.gif"height="333"/>
+</p> 
 
 
 
@@ -42,6 +42,14 @@
 ## ✅ Main POC
 - Create a face swap video
 - Save result video and share it at gallery page categorized by hashtag 
+
+## 👀 Used Model
+- [First Order Motion Model for Image Animationl](https://github.com/AliaksandrSiarohin/first-order-model)  
+![used_model](https://user-images.githubusercontent.com/72537563/126891907-06fbf0bd-d5a7-46b4-a934-0e32d9581493.gif)
+
+## 📗 SWAGGER
++ https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3  
+![swagger](https://user-images.githubusercontent.com/72537563/126892065-b92c3f84-adc5-4fd4-86a5-64d118f63b49.png)
 
 
 ## ✏️ Getting Started (Prerequisities & Installing & Running)
@@ -130,14 +138,8 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   $ docker volume prune  # remove all unused local volume
   ```
   
-## 📗 SWAGGER
-+ https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3  
-![swagger](https://user-images.githubusercontent.com/72537563/126892065-b92c3f84-adc5-4fd4-86a5-64d118f63b49.png)
 
-## 👀 Used Model
-- [Transfer model](https://github.com/AliaksandrSiarohin/first-order-model)  
-![used_model](https://user-images.githubusercontent.com/72537563/126891907-06fbf0bd-d5a7-46b4-a934-0e32d9581493.gif)
-        
+
 
 
 ## 🔧 Directory Structure
