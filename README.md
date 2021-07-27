@@ -44,11 +44,11 @@
 - Save result video and share it at gallery page categorized by hashtag 
 
 ## 👀 Used Model
-- [First Order Motion Model for Image Animationl](https://github.com/AliaksandrSiarohin/first-order-model)  
+- [First Order Motion Model for Image Animation](https://github.com/AliaksandrSiarohin/first-order-model)  
 ![used_model](https://user-images.githubusercontent.com/72537563/126891907-06fbf0bd-d5a7-46b4-a934-0e32d9581493.gif)
 
 ## 📗 SWAGGER
-+ https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3  
+-[See API document](https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3)
 ![swagger](https://user-images.githubusercontent.com/72537563/126892065-b92c3f84-adc5-4fd4-86a5-64d118f63b49.png)
 
 
