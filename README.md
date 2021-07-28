@@ -146,24 +146,25 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 ```bash
 ├── README.md                                          - 리드미 파일
 │
-├── Backend/                                           - 백엔드 플라스크 디렉토리
-│   ├── Dockerfile                                     - 백앤드 도커파일
-│   ├── run.py                                         - Flask 실행 위한 파일
-│   ├── views.py               -                       - SQLAlchamy의 기능을 정의한 파일
-│   ├── dayfly-318913-a4b443321e00.json         
-│   ├── requirements.txt                               - 모듈들을 정리한 파일
-│   └── web/
-│        ├── AI/                                       - AI모델 알고리즘
-│        ├── data/result/                              - 영상 임시 저장 디렉토리
-│        ├── __init__.py
-│        ├── config.py                                 - postgreSQL와 연결 설정
-│        ├── gcp.py
-│        ├── models.py                                 - postgreSQL 모델 설정
-│        ├── prdedictmix.py
-│        ├── routes.py                                 - api 함수 정의
-│        ├── views.py                                  - database ORM 정의 파일
-│        └── static/
-│              └── swagger.json                        - swagger 정의 파일
+├── Backend/                - 백엔드 플라스크 디렉토리
+|   ├── test_endpoints.py   - unit test 실행 파일
+|   ├── run.py              - Flask 실행 위한 파일
+|   ├── views.py            - SQLAlchamy의 기능을 정의한 파일
+|   ├── .flaskenv           - Flask 실행을 위한 환경변수 설정 파일
+|   ├── dayfly-318913-a4b443321e00.json  - Google Cloud Bucket에 접근하기 위한 권한 정보가 담긴 파일        
+|   ├── requirements.txt    - 모듈들을 정리한 파일
+|   └── web/
+|        ├── AI/                  - AI모델 알고리즘
+|        ├── data/result/         - 백엔드 동영상 임시 저장 디렉토리
+|        ├── __init__.py          - 실행시키려는 flask app이 정의되어있는 파일 프로젝트를 실행시키면 app을 구동시킴
+|        ├── config.py            - 필수 configuration 사항들이 정의된 파일
+|        ├── gcp.py               - google cloud bucket을 이용해 파일 입출력 스트림을 다루기 위한 함수가 정의된 파일
+|        ├── models.py            - video_table이라는 database class가 정의된 파일
+|        ├── prdedictmix.py       - AI 모델을 적용해서 서비스의 핵심인 섞인 영상 생성을 하기 위한 파일
+|        ├── routes.py            - API 명세서가 모두 정의된 파일
+|        ├── views.py           -database ORM 정의 파일
+|              └── static/
+|              └── swagger.json     -swagger 정의 파일
 │
 ├── Frontend/
 │   ├── Dockerfile                                    - 프론트앤드 도커파일
