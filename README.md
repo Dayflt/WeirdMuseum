@@ -14,7 +14,8 @@
   <img src="https://user-images.githubusercontent.com/72537563/126996758-0eec7189-5241-4c83-8d3f-cf811806d040.gif"height="333"/>
 </p> 
 
-
+## 💻 System Architecture
+![Architecture_Final](https://user-images.githubusercontent.com/72537563/127142745-0e079bfa-bf2a-4a07-8fbe-3c112307df57.png)
 
 ## 💡 Tech Stack
 ```
@@ -35,10 +36,6 @@
 | :----------------------: | :---------------: | :------------------: |
 | ![react](https://img.shields.io/badge/react-v17.0.2-9cf?logo=react) ![Nodejs](https://img.shields.io/badge/Nodejs-v14.16.0-blue?logo=node.js)   ![Javascript](https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript) ![Bootstrap](https://img.shields.io/badge/bootstrap-v1.4.3-9cf?logo=bootstrap) ![axios](https://img.shields.io/badge/axios-v0.21.1-9cf?color=purple)  | ![Flask](https://img.shields.io/badge/flask-v2.0.1-green?logo=flask)  ![Python](https://img.shields.io/badge/python-v3.8.10-skyblue?logo=python) ![Gunicorn](https://img.shields.io/badge/gunicorn-v20.1.0-darkgreen?logo=gunicorn) ![postgreSQL](https://img.shields.io/badge/postgreSQL-v12.0-blue?logo=postgresql) ![Pytorch](https://camo.githubusercontent.com/5182d780a87ed9c5b2003da7788da5229e02f0713feaf4605682eb890f897d59/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7079746f7263682d626c75653f6c6f676f3d7079746f726368) ![Colab](https://camo.githubusercontent.com/262664d89515ac916d0e1a7e5b90f047caac9c16515aa2139df56bd67523ca6c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6c61622d6461726b677265656e3f6c6f676f3d476f6f676c65436f6c6162)  | ![Docker](https://img.shields.io/badge/docker-v20.10.7-brightgreen?logo=docker)  ![Nginx](https://img.shields.io/badge/Nginx-v1.21.1-brightgreen?logo=nginx)   ![github](https://img.shields.io/badge/github-gray?logo=github)![VScode](https://img.shields.io/badge/VScode-v1.58.1-blue?logo=visual-studio-code) ![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud_Platform-VM_instance-red?logo=gcp) ![GitKraken](https://img.shields.io/badge/GitKraken-gray?logo=GitKraken) ![Swagger](https://img.shields.io/badge/Swagger-gray?logo=Swagger) ![Postman](https://img.shields.io/badge/Postman-gray?logo=Postman) ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white) ![NHNcloud](https://camo.githubusercontent.com/f1b8b16600d3210298fa1971ec94ed1f41cb80146f76f4c9754a075b972970e6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e484e5f436c6f75645f5562756e74752d32302e30342d626c75653f6c6f676f3d7562756e7475)|  
 
-## 💻 System Architecture
-![Architecture_Final](https://user-images.githubusercontent.com/72537563/127142745-0e079bfa-bf2a-4a07-8fbe-3c112307df57.png)
-<!-- ![시스템아키텍쳐](https://user-images.githubusercontent.com/72537563/125903428-906468b5-f4e8-498b-91e3-e348cc90e1e5.png) -->
-
 ## ✅ Main POC
 - Create a face swap video
 - Save result video and share it at gallery page categorized by hashtag 
@@ -48,7 +45,7 @@
 ![used_model](https://user-images.githubusercontent.com/72537563/126891907-06fbf0bd-d5a7-46b4-a934-0e32d9581493.gif)
 
 ## 📗 SWAGGER
--[See API document](https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3)
+- [See API document](https://app.swaggerhub.com/apis/harloxx/WeirdMuseum/1-oas3)
 ![swagger](https://user-images.githubusercontent.com/72537563/126892065-b92c3f84-adc5-4fd4-86a5-64d118f63b49.png)
 
 
