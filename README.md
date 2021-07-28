@@ -174,7 +174,7 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 │   ├── package.json & package.lock.json              - 라이브러리 관리 파일
 │   └── src/ 
 │        ├── index.js & index.css                     - React 프로젝트 파일
-│        ├── App.js & App.css                         - page component 관리 파일
+│        ├── App.js & App.css                         - page component들 관리 파일
 │        ├── App.test.js & setupTest.js
 │        ├── reportWebVitals.js
 │        ├── api.jsx                                   - baseURL 설정
