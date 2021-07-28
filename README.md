@@ -68,11 +68,11 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
 ### 4.  Docker 🐳
   #### ✔ Development environment 
   ```
-  $ docker-compose up --build  # build images and run containers
-  $ docker-compose down #stop running containers
-  $ docker-compose up # rerun containers
+  $ docker-compose up --build         # build images and run containers
+  $ docker-compose down               # stop running containers
+  $ docker-compose up                 # rerun containers
   or 
-  $ docker-compose down -v # stop running containers and delete its volume
+  $ docker-compose down -v            # stop running containers and delete its volume
   ```
   - See database
    ```
@@ -99,8 +99,8 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   
   3. Run the init script to obtain SSL Certificates and Credentials (./certbot directory will be created)
   ```
-  $ chmod +x ./init-letsencrypt.sh  # Make it executable
-  $ ./init-letsencrypt.sh            # Run the init script
+  $ chmod +x ./init-letsencrypt.sh    # Make it executable
+  $ ./init-letsencrypt.sh             # Run the init script
   ```
   
   4. Check the status of your service
@@ -111,10 +111,10 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
  5. Once you obtain SSL Certificates and Credentials, use the commands below to run, stop or rerun the containers.
  ```
   $ docker-compose -f docker-compose.prod.yml up --build
-  $ docker-compose down #stop running containers
-  $ docker- compose -f docker-compose.prod.yml up # rerun containers
+  $ docker-compose down                                         #stop running containers
+  $ docker- compose -f docker-compose.prod.yml up               # rerun containers
   or
-  $ docker-compose down # stop running containers and delete its volume
+  $ docker-compose down                                         # stop running containers and delete its volume
   ```
    
   - Running (based on our domain)
@@ -124,15 +124,15 @@ $ git clone https://github.com/Dayflt/Silicon-Valley-Internship-Dayfly.git
   
   #### etc
   ```
-  $ docker ps #See running containers
-  $ docker ps -a #See all containers
-  $ docker-compose logs [service_name]  #Check the service logs
-  $ docker images # See all built images
-  $ docker-compose rm -f $(docker ps -a -q) #remove all containers
-  $ docker volume ls # See volumes
-  $ docker images prune # remove untagged(none) images
-  $ docker network prune # remove all unused network
-  $ docker volume prune  # remove all unused local volume
+  $ docker ps                                       # See running containers
+  $ docker ps -a                                    # See all containers
+  $ docker-compose logs [service_name]              # Check the service logs
+  $ docker images                                   # See all built images
+  $ docker-compose rm -f $(docker ps -a -q)         # Remove all containers
+  $ docker volume ls                                # See volumes
+  $ docker images prune                             # Remove untagged(none) images
+  $ docker network prune                            # Remove all unused network
+  $ docker volume prune                             # Remove all unused local volume
   ```
   
 
