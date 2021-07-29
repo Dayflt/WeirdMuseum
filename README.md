@@ -4,7 +4,7 @@
 
 <b>Weird Museum</b> is a responsive web where you can bring images to life. There is a couple of famous paintings you can choose and you can create realistic face swaps based on the target painting by just taking a short video clip.
 
-<!-- ✨ [See our website!](https://weirdmuseum.ml) ✨ -->
+✨ [See our website!](https://weirdmuseum.ml) ✨
 
 ## 🔍 User Interface 
 #### Main ➡️ Select ➡️ Record ➡️ Preview ➡️ Result ➡️ Gallery
